@@ -1,7 +1,7 @@
-export default function RaysIcon() {
+export default function RaysIconMobile() {
   return (
     <svg
-      viewBox="0 0 1283 781"
+      viewBox="0 0 2093 781"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       preserveAspectRatio="xMidYMin slice"

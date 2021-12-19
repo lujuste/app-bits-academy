@@ -137,7 +137,7 @@ export default function UnderstandToDigital() {
               color="black"
               mb="1.5rem"
             >
-              {t.mobile_title_video_area}{' '}
+              Entenda porque você deveria{' '}
               <Text fontWeight="700" as="span" color="purple.500">
                 {' '}
                 <Text as="span">se</Text> digitalizar

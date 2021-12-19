@@ -9,6 +9,7 @@ import IFreeTestYourCompanyDigitalProps from '../FreeTestYourCompanyDigital';
 import { useRouter } from 'next/router';
 
 import { useTranslate } from '../../contexts/Translate';
+import RaysIconMobile from '../RaysIconMobile';
 
 const HomeScreen: NextPage = () => {
   const router = useRouter();
@@ -82,7 +83,7 @@ const HomeScreen: NextPage = () => {
           right="10%"
           overflow="hidden"
         >
-          <RaysIcon />
+          <RaysIconMobile />
           <span></span>
           <span></span>
           <span></span>
@@ -180,7 +181,7 @@ const HomeScreen: NextPage = () => {
                 bgGradient: 'linear(to-t, #4B2076, #360666)',
               }}
               mb="1rem"
-              zIndex={'910'}
+              zIndex="9999"
             />
             <HomeButton
               colorOne="#DFDFDF"
@@ -189,7 +190,7 @@ const HomeScreen: NextPage = () => {
               shadow="2xl"
               textColor="purple.500"
               href="/"
-              zIndex="999"
+              zIndex="9999"
               _hover={{
                 bgGradient: 'linear(to-t, white, white)',
               }}
