@@ -27,8 +27,11 @@ const videoURL = 'http://localhost:3000/images/whydigital.mp4';
 
 import graphicHome from '../../../public/images/graphic.svg';
 import graphicHomeMobile from '../../../public/images/graphic-mobile.svg';
+import { useTranslate } from '../../contexts/Translate';
 
 export default function UnderstandToDigital() {
+  const { t }: any = useTranslate();
+
   const $videoPlayer: any = useRef(null);
 
   // @ts-ignore: Unreachable code error
@@ -134,7 +137,7 @@ export default function UnderstandToDigital() {
               color="black"
               mb="1.5rem"
             >
-              Entenda porque você deveria{' '}
+              {t.mobile_title_video_area}{' '}
               <Text fontWeight="700" as="span" color="purple.500">
                 {' '}
                 <Text as="span">se</Text> digitalizar
@@ -316,7 +319,7 @@ export default function UnderstandToDigital() {
                     as={BsTriangleFill}
                     color="purple.500"
                   />
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit
+                  Usar dados para tomar decisões;
                 </ListItem>
                 <ListItem
                   color="black"
@@ -328,7 +331,7 @@ export default function UnderstandToDigital() {
                     as={BsTriangleFill}
                     color="purple.500"
                   />
-                  Assumenda, quia temporibus eveniet a libero incidunt suscipit
+                  Controlar seus resultados;
                 </ListItem>
                 <ListItem
                   color="black"
@@ -340,7 +343,7 @@ export default function UnderstandToDigital() {
                     as={BsTriangleFill}
                     color="purple.500"
                   />
-                  Quidem, ipsam illum quis sed voluptatum quae eum fugit earum
+                  Enxergar seus processos em tempo real;
                 </ListItem>
 
                 <ListItem
@@ -353,7 +356,7 @@ export default function UnderstandToDigital() {
                     as={BsTriangleFill}
                     color="purple.500"
                   />
-                  Quidem, ipsam illum quis sed voluptatum quae eum fugit earum
+                  Antever problemas na sua empresa;
                 </ListItem>
               </List>
             </GridItem>
@@ -370,7 +373,7 @@ export default function UnderstandToDigital() {
                     as={BsTriangleFill}
                     color="purple.500"
                   />
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit
+                  Ajustar estratégias para alcançar os objetivos da sua empresa;
                 </ListItem>
                 <ListItem
                   color="black"
@@ -383,7 +386,7 @@ export default function UnderstandToDigital() {
                     color="purple.500"
                     justifyItems="initial"
                   />
-                  Assumenda, quia temporibus eveniet a libero incidunt suscipit
+                  Se tornar mais eficiente;
                 </ListItem>
                 <ListItem
                   color="black"
@@ -395,7 +398,7 @@ export default function UnderstandToDigital() {
                     as={BsTriangleFill}
                     color="purple.500"
                   />
-                  Quidem, ipsam illum quis sed voluptatum quae eum fugit earum
+                  Diminuir as despesas da sua empresa;
                 </ListItem>
 
                 <ListItem
@@ -408,7 +411,7 @@ export default function UnderstandToDigital() {
                     as={BsTriangleFill}
                     color="purple.500"
                   />
-                  Quidem, ipsam illum quis sed voluptatum quae eum fugit earum
+                  Criar novos produtos e serviços.
                 </ListItem>
               </List>
             </GridItem>

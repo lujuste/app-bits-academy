@@ -1,7 +1,6 @@
 import { NextPage } from 'next';
 import { Flex, Heading, Text, useBreakpointValue, Box } from '@chakra-ui/react';
 
-import Image from 'next/image';
 import '@fontsource/baloo-bhaina-2';
 import RaysIcon from '../RaysIcon/index';
 import HomeButton from '../HomeButton';
@@ -122,7 +121,7 @@ const HomeScreen: NextPage = () => {
             fontFamily="Baloo 2"
             fontWeight="700"
           >
-            digitalizar?
+            {t.title2}
           </Text>
         </Heading>
       </Flex>
@@ -143,7 +142,7 @@ const HomeScreen: NextPage = () => {
             <HomeButton
               colorOne="#DFDFDF"
               colorTwo="#FFF"
-              text="NÃO"
+              text={t.btnhome2}
               shadow="2xl"
               textColor="purple.500"
               href="/"
@@ -156,7 +155,7 @@ const HomeScreen: NextPage = () => {
             <HomeButton
               colorOne="#4B2076"
               colorTwo="#663399"
-              text="SIM"
+              text={t.btnhome1}
               shadow="dark-lg"
               textColor="#FFF"
               href="/"
@@ -172,10 +171,11 @@ const HomeScreen: NextPage = () => {
             <HomeButton
               colorOne="#4B2076"
               colorTwo="#663399"
-              text="SIM"
+              text={t.btnhome1}
               shadow="dark-lg"
               textColor="#FFF"
               href="/"
+              transition={'bgGradient ease 2000s'}
               _hover={{
                 bgGradient: 'linear(to-t, #4B2076, #360666)',
               }}
@@ -185,7 +185,7 @@ const HomeScreen: NextPage = () => {
             <HomeButton
               colorOne="#DFDFDF"
               colorTwo="#FFF"
-              text="NÃO"
+              text={t.btnhome2}
               shadow="2xl"
               textColor="purple.500"
               href="/"

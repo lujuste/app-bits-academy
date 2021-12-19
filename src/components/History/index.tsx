@@ -11,8 +11,11 @@ import {
 } from '@chakra-ui/react';
 import timelineIcon from '../../../public/images/iconn.svg';
 import timelineIconMobile from '../../../public/images/icon-mobile.svg';
+import { useTranslate } from '../../contexts/Translate';
 
 export default function History() {
+  const { t }: any = useTranslate();
+
   const isMobile = useBreakpointValue({
     base: true,
     sm: true,
@@ -53,15 +56,15 @@ export default function History() {
             mt={['-4rem', '-3rem', '0', '0']}
             textAlign={['center', 'center', 'left']}
           >
-            A{' '}
+            {t.history1}{' '}
             <Text color="purple.500" as="span">
-              Bits Academy
+              {t.titlebitsacademy}
             </Text>{' '}
-            ajuda sua empresa a entrar no digital para aproveitar as{' '}
+            {t.titlehistory2}{' '}
             <Text as="span" color="purple.500">
-              vantagens{' '}
+              {t.titlehistory3}{' '}
             </Text>
-            que a internet traz para o seu negócio.
+            {t.titlehistory4}
           </Heading>
           <Text
             fontFamily="Maven Pro"
@@ -72,13 +75,7 @@ export default function History() {
             maxW="600px"
             px={['1rem', '1rem', '0']}
           >
-            Em 2021 a Bits Academy ganhou o prêmio 100 Open Startups, sendo
-            reconhecida como uma boa oportunidade de investimento e parceira de
-            grandes corporações em inovação aberta no segmento EDTECH. Também
-            foi nomeada como uma das 10 finalistas do Startup Awards 2021 na
-            categoria Startup Revelação. No mesmo ano, também participou do
-            programa Shark Tank conseguindo atrair o interesse de investidores
-            no programa.
+            {t.titlehistory5}
           </Text>
         </GridItem>
         <GridItem>

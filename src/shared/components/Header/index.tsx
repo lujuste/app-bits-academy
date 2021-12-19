@@ -38,6 +38,8 @@ export default function Header() {
   const { pathname, asPath, query } = router;
   const { isOpen, onOpen, onClose } = useSidebarDrawer();
 
+  const { t }: any = useTranslate();
+
   function translateMode() {
     setEnglish(!english);
   }
@@ -105,16 +107,17 @@ export default function Header() {
             <>
               <Text
                 color="white"
-                fontSize="1.375rem"
+                fontSize="1.1rem"
                 fontWeight="400"
+                display={'inline-block'}
                 fontFamily="Maven Pro"
               >
-                Sua empresa já é digital?
+                {t.header1}
               </Text>
               <Button
                 mx="auto"
                 boxShadow="lg"
-                w="260px"
+                w="250px"
                 h="52px"
                 bgGradient="linear(to-t, #c7c5c5, #FFF)"
                 fontFamily="Roboto"
@@ -126,7 +129,7 @@ export default function Header() {
                 }}
                 color="purple.500"
               >
-                Clique aqui para descobrir
+                {t.btnheader}
               </Button>
             </>
           )}
@@ -215,7 +218,7 @@ export default function Header() {
                     transition: 'all linear 0.2s',
                   }}
                 >
-                  Serviços
+                  {t.menuitem}
                 </MenuItem>
                 <MenuItem
                   _hover={{
@@ -224,7 +227,7 @@ export default function Header() {
                     transition: 'all linear 0.2s',
                   }}
                 >
-                  Notícias
+                  {t.menuitem2}
                 </MenuItem>
                 <MenuItem
                   _hover={{
@@ -233,7 +236,7 @@ export default function Header() {
                     transition: 'all linear 0.2s',
                   }}
                 >
-                  Casos de sucesso
+                  {t.menuitem3}
                 </MenuItem>
               </MenuList>
             </Menu>

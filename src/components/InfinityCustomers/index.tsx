@@ -3,17 +3,15 @@ import {
   Heading,
   Text,
   Box,
-  List,
-  ListItem,
   Button,
   useBreakpointValue,
 } from '@chakra-ui/react';
-import { useState } from 'react';
 
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import Marquee from 'react-fast-marquee';
+import { useTranslate } from '../../contexts/Translate';
 
 const data = {
   company: [
@@ -49,6 +47,7 @@ const data = {
 };
 
 export default function InfinityCustomers() {
+  const { t }: any = useTranslate();
   const isMobile = useBreakpointValue({
     base: true,
     sm: true,
@@ -75,13 +74,13 @@ export default function InfinityCustomers() {
         fontFamily="Maven Pro"
         textAlign={['center', 'center', 'center', 'center']}
       >
-        Quem{' '}
+        {t.titlecustomers1}{' '}
         <Text as="span" color="purple.500">
-          acredita
+          {t.titlecustomers2}
         </Text>{' '}
-        na Bits e já usou{' '}
+        {t.titlecustomers3}{' '}
         <Text as="span" color="purple.500">
-          nosso serviço
+          {t.titlecustomers4}
         </Text>
       </Text>
 
@@ -334,7 +333,7 @@ export default function InfinityCustomers() {
           }}
           textAlign="center"
         >
-          QUERO FALAR COM UM ESPECIALISTA DIGITAL
+          {t.customersbtn}
         </Button>
       ) : (
         <Button
@@ -355,7 +354,7 @@ export default function InfinityCustomers() {
             bgGradient: 'linear(to-t, #4B2076, #360666)',
           }}
         >
-          QUERO FALAR COM UM <br /> ESPECIALISTA DIGITAL
+          {t.customersbtn1} <br /> {t.customersbtn2}
         </Button>
       )}
     </Flex>
