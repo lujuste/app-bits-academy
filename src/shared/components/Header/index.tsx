@@ -1,0 +1,285 @@
+import {
+  Flex,
+  Icon,
+  Text,
+  Button,
+  Menu,
+  MenuButton,
+  MenuList,
+  MenuItem,
+  Center,
+  Divider,
+  useBreakpointValue,
+  useDisclosure,
+  Drawer,
+  DrawerBody,
+  DrawerCloseButton,
+  DrawerContent,
+  DrawerHeader,
+  DrawerOverlay,
+  IconButton,
+} from '@chakra-ui/react';
+import IconBitsWhite from '../IconBitsWhite';
+import { ChevronDownIcon, SearchIcon, HamburgerIcon } from '@chakra-ui/icons';
+import { useState, useEffect } from 'react';
+import router, { useRouter } from 'next/router';
+import { useTranslation } from 'react-i18next';
+
+import MobileNav from './MobileNav';
+
+import { useSidebarDrawer } from '../../../contexts/SidebarDrawer';
+import { useTranslate } from '../../../contexts/Translate';
+
+export default function Header() {
+  const { i18n } = useTranslation();
+
+  const { english, setEnglish }: any = useTranslate();
+  const router = useRouter();
+  const { pathname, asPath, query } = router;
+  const { isOpen, onOpen, onClose } = useSidebarDrawer();
+
+  function translateMode() {
+    setEnglish(!english);
+  }
+
+  useEffect(() => {
+    if (english === true) {
+      router.push({ pathname, query }, asPath, { locale: 'en-US' });
+    }
+
+    if (english === false) {
+      router.push({ pathname, query }, asPath, { locale: 'pt-BR' });
+    }
+  }, [english]);
+
+  const isWideVersion = useBreakpointValue({
+    base: false,
+    sm: false,
+    md: false,
+    lg: true,
+    xl: true,
+  });
+
+  const isMobile = useBreakpointValue({
+    base: true,
+    sm: true,
+    md: false,
+    lg: false,
+  });
+
+  return (
+    <Flex align="center" w="100%" h="128px" mx="auto" bgColor="purple.500">
+      <Flex
+        px={[10, 10, 20, 20]}
+        w="100%"
+        maxW="1400px"
+        mx="auto"
+        align="center"
+        position="relative"
+      >
+        <Flex
+          sx={
+            isMobile
+              ? {
+                  top: '50%',
+                  left: '50%',
+                  transform: 'translate(-50% , -50%)',
+                  position: 'absolute',
+                }
+              : {}
+          }
+        >
+          <IconBitsWhite />
+        </Flex>
+
+        <Flex
+          flex="1"
+          align="center"
+          maxW="626px"
+          w="100%"
+          justify="space-around"
+          ml="auto"
+          pl={['3rem', '4rem', '4rem', '5rem', '5rem']}
+        >
+          {isWideVersion && (
+            <>
+              <Text
+                color="white"
+                fontSize="1.375rem"
+                fontWeight="400"
+                fontFamily="Maven Pro"
+              >
+                Sua empresa já é digital?
+              </Text>
+              <Button
+                mx="auto"
+                boxShadow="lg"
+                w="260px"
+                h="52px"
+                bgGradient="linear(to-t, #c7c5c5, #FFF)"
+                fontFamily="Roboto"
+                fontWeigth="700"
+                transition={'ease-in-out'}
+                fontSize="1rem"
+                _hover={{
+                  bgGradient: 'linear(to-t, white, white )',
+                }}
+                color="purple.500"
+              >
+                Clique aqui para descobrir
+              </Button>
+            </>
+          )}
+        </Flex>
+
+        {!isMobile && (
+          <Flex
+            justify="space-between"
+            maxW="165px"
+            w="100%"
+            ml="auto"
+            align="center"
+          >
+            <Menu>
+              <>
+                <MenuButton
+                  py={2}
+                  as="button"
+                  transition="all 0.4s"
+                  _hover={{ border: 'none' }}
+                  _active={{ border: 'none' }}
+                  _expanded={{ bg: 'transparent' }}
+                  _focus={{}}
+                  bgColor="transparent"
+                  border="none"
+                  sx={{
+                    color: 'white',
+                  }}
+                >
+                  {english === false ? (
+                    <Text as="span" color="white">
+                      PT
+                    </Text>
+                  ) : (
+                    <Text as="span" color="white">
+                      EN
+                    </Text>
+                  )}{' '}
+                  <ChevronDownIcon color="white" />
+                </MenuButton>
+                <MenuList
+                  p={0}
+                  display={'flex'}
+                  minW="0"
+                  flexDir="column"
+                  w={'130px'}
+                  bgColor="#fff"
+                  mr="1.9rem"
+                >
+                  <MenuItem
+                    onClick={translateMode}
+                    _hover={{
+                      color: 'white',
+                      bgColor: 'purple.500',
+                      borderRadius: '5px',
+                      transition: 'all linear 0.2s',
+                    }}
+                  >
+                    {english === false ? 'Inglês' : 'Português'}
+                  </MenuItem>
+                </MenuList>
+              </>
+            </Menu>
+
+            <Center w={1} height="25px">
+              <Divider orientation="vertical" />
+            </Center>
+            <Text cursor="pointer" color="white">
+              Blog
+            </Text>
+            <Center w={1} height="25px">
+              <Divider orientation="vertical" />
+            </Center>
+            <Menu>
+              <MenuButton
+                as={IconButton}
+                aria-label="options"
+                variant="none"
+                icon={<HamburgerIcon w={6} h={6} color="white" />}
+              />
+              <MenuList bgColor="#fff" mr="0.9rem">
+                <MenuItem
+                  _hover={{
+                    color: 'white',
+                    bgColor: 'purple.500',
+                    transition: 'all linear 0.2s',
+                  }}
+                >
+                  Serviços
+                </MenuItem>
+                <MenuItem
+                  _hover={{
+                    color: 'white',
+                    bgColor: 'purple.500',
+                    transition: 'all linear 0.2s',
+                  }}
+                >
+                  Notícias
+                </MenuItem>
+                <MenuItem
+                  _hover={{
+                    color: 'white',
+                    bgColor: 'purple.500',
+                    transition: 'all linear 0.2s',
+                  }}
+                >
+                  Casos de sucesso
+                </MenuItem>
+              </MenuList>
+            </Menu>
+          </Flex>
+        )}
+
+        {isMobile && (
+          <>
+            <HamburgerIcon
+              cursor="pointer"
+              onClick={onOpen}
+              w={6}
+              h={6}
+              color="white"
+            />
+
+            <Drawer
+              size="full"
+              isOpen={isOpen}
+              placement="left"
+              onClose={onClose}
+            >
+              <DrawerOverlay>
+                <DrawerContent bgGradient="linear(to-t, #000, #4B2076)">
+                  <DrawerCloseButton
+                    color="white"
+                    fontSize="1.25rem"
+                    mt="6"
+                    zIndex="500000"
+                    _focus={{
+                      border: 'none',
+                    }}
+                    _active={{
+                      border: 'none',
+                    }}
+                  />
+                  <DrawerHeader mt="7"></DrawerHeader>
+                  <DrawerBody zIndex={999999}>
+                    <MobileNav />
+                  </DrawerBody>
+                </DrawerContent>
+              </DrawerOverlay>
+            </Drawer>
+          </>
+        )}
+      </Flex>
+    </Flex>
+  );
+}
