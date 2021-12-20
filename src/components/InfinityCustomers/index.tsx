@@ -221,7 +221,7 @@ export default function InfinityCustomers() {
       {isMobile && (
         <Flex h="100%" justify="center" align="center">
           <Swiper
-            speed={100}
+            speed={1000}
             slidesPerView={3}
             pagination={{ clickable: true }}
             style={{

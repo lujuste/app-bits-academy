@@ -20,7 +20,12 @@ import {
   IconButton,
 } from '@chakra-ui/react';
 import IconBitsWhite from '../IconBitsWhite';
-import { ChevronDownIcon, SearchIcon, HamburgerIcon } from '@chakra-ui/icons';
+import {
+  ChevronDownIcon,
+  SearchIcon,
+  HamburgerIcon,
+  ChevronUpIcon,
+} from '@chakra-ui/icons';
 import { useState, useEffect } from 'react';
 import router, { useRouter } from 'next/router';
 import { useTranslation } from 'react-i18next';
@@ -143,55 +148,60 @@ export default function Header() {
             ml="auto"
             align="center"
           >
-            <Menu>
-              <>
-                <MenuButton
-                  py={2}
-                  as="button"
-                  transition="all 0.4s"
-                  _hover={{ border: 'none' }}
-                  _active={{ border: 'none' }}
-                  _expanded={{ bg: 'transparent' }}
-                  _focus={{}}
-                  bgColor="transparent"
-                  border="none"
-                  sx={{
-                    color: 'white',
+            <Menu isOpen={isOpen}>
+              <MenuButton
+                py={2}
+                as="button"
+                transition="all 0.4s"
+                _hover={{ border: 'none', borderColor: 'transparent' }}
+                _active={{ border: 'none', borderColor: 'transparent' }}
+                _expanded={{ bg: 'transparent', borderColor: 'transparent' }}
+                _focus={{ border: 'none', borderColor: 'transparent' }}
+                bgColor="transparent"
+                border="none"
+                onMouseEnter={onOpen}
+                onMouseLeave={onClose}
+                sx={{
+                  color: 'white',
+                }}
+              >
+                {english === false ? (
+                  <Text as="span" color="white">
+                    PT
+                  </Text>
+                ) : (
+                  <Text as="span" color="white">
+                    EN
+                  </Text>
+                )}{' '}
+                {isOpen ? (
+                  <ChevronUpIcon color="white" />
+                ) : (
+                  <ChevronDownIcon color="white" />
+                )}
+              </MenuButton>
+              <MenuList
+                onMouseEnter={onOpen}
+                onMouseLeave={onClose}
+                p={0}
+                display={'flex'}
+                minW="0"
+                flexDir="column"
+                w={'130px'}
+                bgColor="#fff"
+                mr="1.9rem"
+              >
+                <MenuItem
+                  onClick={translateMode}
+                  _hover={{
+                    color: 'purple.500',
+                    fontWeight: 'regular',
+                    transition: 'all ease 0.1s',
                   }}
                 >
-                  {english === false ? (
-                    <Text as="span" color="white">
-                      PT
-                    </Text>
-                  ) : (
-                    <Text as="span" color="white">
-                      EN
-                    </Text>
-                  )}{' '}
-                  <ChevronDownIcon color="white" />
-                </MenuButton>
-                <MenuList
-                  p={0}
-                  display={'flex'}
-                  minW="0"
-                  flexDir="column"
-                  w={'130px'}
-                  bgColor="#fff"
-                  mr="1.9rem"
-                >
-                  <MenuItem
-                    onClick={translateMode}
-                    _hover={{
-                      color: 'white',
-                      bgColor: 'purple.500',
-                      borderRadius: '5px',
-                      transition: 'all linear 0.2s',
-                    }}
-                  >
-                    {english === false ? 'Inglês' : 'Português'}
-                  </MenuItem>
-                </MenuList>
-              </>
+                  {english === false ? 'Inglês' : 'Português'}
+                </MenuItem>
+              </MenuList>
             </Menu>
 
             <Center w={1} height="25px">
@@ -209,31 +219,38 @@ export default function Header() {
                 aria-label="options"
                 variant="none"
                 icon={<HamburgerIcon w={6} h={6} color="white" />}
+                _active={{ border: 'none' }}
+                _focus={{ border: 'none' }}
               />
-              <MenuList bgColor="#fff" mr="0.9rem">
+              <MenuList
+                onMouseEnter={onOpen}
+                onMouseLeave={onClose}
+                bgColor="#fff"
+                mr="0.9rem"
+              >
                 <MenuItem
                   _hover={{
-                    color: 'white',
-                    bgColor: 'purple.500',
-                    transition: 'all linear 0.2s',
+                    color: 'purple.500',
+                    fontWeight: 'regular',
+                    transition: 'all ease 0.1s',
                   }}
                 >
                   {t.menuitem}
                 </MenuItem>
                 <MenuItem
                   _hover={{
-                    color: 'white',
-                    bgColor: 'purple.500',
-                    transition: 'all linear 0.2s',
+                    color: 'purple.500',
+                    fontWeight: 'regular',
+                    transition: 'all ease 0.1s',
                   }}
                 >
                   {t.menuitem2}
                 </MenuItem>
                 <MenuItem
                   _hover={{
-                    color: 'white',
-                    bgColor: 'purple.500',
-                    transition: 'all linear 0.2s',
+                    color: 'purple.500',
+                    fontWeight: 'regular',
+                    transition: 'all ease 0.1s',
                   }}
                 >
                   {t.menuitem3}

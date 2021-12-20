@@ -127,10 +127,9 @@ export default function Footer() {
                           <MenuItem
                             onClick={translateMode}
                             _hover={{
-                              color: 'white',
-                              bgColor: 'purple.500',
-                              borderRadius: '5px',
-                              transition: 'all linear 0.2s',
+                              color: 'purple.500',
+                              fontWeight: 'regular',
+                              transition: 'all ease 0.1s',
                             }}
                           >
                             {english === false ? 'Inglês' : 'Português'}

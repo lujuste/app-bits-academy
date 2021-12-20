@@ -23,4 +23,13 @@ export default {
   customersbtn1: 'QUERO FALAR COM UM',
   customersbtn2: 'ESPECIALISTA DIGITAL',
   mobile_title_video_area: 'Entenda porque você deveria',
+  mobile_title1_video: 'se',
+  mobile_title2_video: 'digitalizar',
+  body_video:
+    'Chegamos em um momento em que as empresas podem escolher se elas participam do mundo digital ou se querem estar fora do mercado.',
+  body1_video:
+    'Isso ficou muito claro durante o período de lockdown imposto pela pandemia. Nessa época, vimos muitas empresas sofrerem com o fato de não serem digitais. Logicamente, como esse movimento foi muito brusco, algumas empresas quebraram no meio do caminho, antes de conseguirem se digitalizar.',
+  body2_video:
+    'No entanto, isso foi só um exemplo da importância de uma empresa fazer sua transformação digital. Os negócios estão se tornando cada vez mais dependentes de processos e tecnologias digitais.',
+  body3_video: '',
 };

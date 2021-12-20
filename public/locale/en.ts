@@ -1,5 +1,5 @@
 export default {
-  header1: 'Is your company already digital?',
+  header1: 'Your company already is digital?',
   btnheader: 'Click me to find out',
   title1: 'do you want',
   title2: 'to digital?',
@@ -22,5 +22,14 @@ export default {
   customersbtn: 'I WANT TO TALK WITH A SPECIALIST',
   customersbtn1: 'I WANT TO TALK WITH',
   customersbtn2: ' A SPECIALIST',
-  mobile_title_video_area: 'Entenda porque você deveria',
+  mobile_title_video_area: 'understand why you should',
+  mobile_title1_video: 'to',
+  mobile_title2_video: 'digital',
+  body_video:
+    'Chegamos em um momento em que as empresas podem escolher se elas participam do mundo digital ou se querem estar fora do mercado.',
+  body1_video:
+    'Isso ficou muito claro durante o período de lockdown imposto pela pandemia. Nessa época, vimos muitas empresas sofrerem com o fato de não serem digitais. Logicamente, como esse movimento foi muito brusco, algumas empresas quebraram no meio do caminho, antes de conseguirem se digitalizar.',
+  body2_video:
+    'No entanto, isso foi só um exemplo da importância de uma empresa fazer sua transformação digital. Os negócios estão se tornando cada vez mais dependentes de processos e tecnologias digitais.',
+  body3_video: '',
 };

@@ -1,4 +1,5 @@
 import { useBreakpointValue, Text, Button } from '@chakra-ui/react';
+import { useTranslate } from '../../contexts/Translate';
 
 interface IFreeTestYourCompanyDigitalProps {
   title?: string;
@@ -9,6 +10,8 @@ export default function FreeTestYourCompanyDigital({
   title,
   description,
 }: IFreeTestYourCompanyDigitalProps) {
+  const { t }: any = useTranslate();
+
   const isWideVersion = useBreakpointValue({
     base: false,
     sm: false,
@@ -28,7 +31,7 @@ export default function FreeTestYourCompanyDigital({
             fontFamily="Roboto"
             mt={['2rem', '3rem', '3rem', '-6rem', '0rem']}
           >
-            Sua empresa já é digital?
+            {t.header1}
           </Text>
           <Button
             mt="1rem"
@@ -43,7 +46,7 @@ export default function FreeTestYourCompanyDigital({
             color="purple.500"
             fontWeight="700"
           >
-            Clique aqui para descobrir
+            {t.btnheader}
           </Button>
         </>
       )}

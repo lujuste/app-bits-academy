@@ -137,10 +137,11 @@ export default function UnderstandToDigital() {
               color="black"
               mb="1.5rem"
             >
-              Entenda porque você deveria{' '}
+              {t.mobile_title_video_area}{' '}
               <Text fontWeight="700" as="span" color="purple.500">
                 {' '}
-                <Text as="span">se</Text> digitalizar
+                <Text as="span"> {t.mobile_title1_video} </Text>{' '}
+                {`${t.mobile_title2_video}`}
               </Text>{' '}
             </Heading>
           ) : (
@@ -156,10 +157,11 @@ export default function UnderstandToDigital() {
               color="black"
               mb="1.5rem"
             >
-              Entenda porque você deveria{' '}
+              {t.mobile_title_video_area}{' '}
               <Text fontWeight="700" color="purple.500">
                 {' '}
-                <Text as="span">se</Text> digitalizar
+                <Text as="span"> {t.mobile_title1_video} </Text>{' '}
+                {t.mobile_title2_video}
               </Text>{' '}
             </Heading>
           )}
