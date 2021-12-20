@@ -21,7 +21,7 @@ import { useTranslate } from '../../contexts/Translate';
 const data = {
   company: [
     {
-      name: 'globo',
+      name: 'equatorial',
       logo: 'equatorial',
     },
     {
@@ -29,23 +29,23 @@ const data = {
       logo: 'globo',
     },
     {
-      name: 'globo',
+      name: 'ifood',
       logo: 'ifood',
     },
     {
-      name: 'globo',
+      name: 'arcelor',
       logo: 'arcelor-mittal',
     },
     {
-      name: 'globo',
+      name: 'bndes',
       logo: 'bndes',
     },
     {
-      name: 'globo',
+      name: 'kraftheinz',
       logo: 'kraftheinz',
     },
     {
-      name: 'globo',
+      name: 'santander',
       logo: 'santander',
     },
   ],
