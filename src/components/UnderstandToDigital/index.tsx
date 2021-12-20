@@ -124,6 +124,7 @@ export default function UnderstandToDigital() {
       py="5rem"
       mb="2rem"
       px={[0, 0, '3rem']}
+      id="sectionDigital"
     >
       <Flex flexDir="column" maxW="1400px" h="100%" justify="center" mx="auto">
         <Flex justify="center" flexDir="column">

@@ -21,7 +21,7 @@ const HomeScreen: NextPage = () => {
   }
   function scrollToYesMobile() {
     window.scrollTo({
-      top: 100,
+      top: 1000,
       behavior: 'smooth',
     });
   }
@@ -35,7 +35,7 @@ const HomeScreen: NextPage = () => {
 
   function scrollToNoMobile() {
     window.scrollTo({
-      top: 100,
+      top: 1000,
       behavior: 'smooth',
     });
   }
@@ -176,7 +176,7 @@ const HomeScreen: NextPage = () => {
               text={t.btnhome2}
               shadow="2xl"
               textColor="purple.500"
-              href="/"
+              href="#sectionDigital"
               zIndex="999"
               onClick={scrollToNoMobile}
               _hover={{
@@ -190,7 +190,7 @@ const HomeScreen: NextPage = () => {
               text={t.btnhome1}
               shadow="dark-lg"
               textColor="#FFF"
-              href="/"
+              href="#typeformSection"
               onClick={scrollToYesMobile}
               _hover={{
                 bgGradient: 'linear(to-t, #4B2076, #360666)',

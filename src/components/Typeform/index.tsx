@@ -11,6 +11,7 @@ export default function Typeform() {
       border="0"
       maxW="100%"
       h="auto"
+      id="typeformSection"
       borderRadius="0"
       backgroundClip="content-box, padding-box"
     >

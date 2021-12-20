@@ -368,15 +368,15 @@ export default function Footer() {
               <Box mb="0.5rem">
                 <IconBitsWhite />
               </Box>
-              <Divider
+
+              {/*  <Divider
                 border="1px"
                 borderColor="white"
                 pt="1.2rem"
                 mt="0.2rem"
                 height="5px"
                 orientation="vertical"
-              />
-              <Menu>
+              /> <Menu>
                 <>
                   <MenuButton
                     py={2}
@@ -425,7 +425,7 @@ export default function Footer() {
                     </MenuItem>
                   </MenuList>
                 </>
-              </Menu>
+              </Menu> */}
             </HStack>
 
             <Divider orientation="vertical" />
