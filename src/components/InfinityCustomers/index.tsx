@@ -45,8 +45,8 @@ const data = {
       logo: 'kraftheinz',
     },
     {
-      name: 'santander',
-      logo: 'santander',
+      name: 'santand',
+      logo: 'santand',
     },
   ],
 };
@@ -170,7 +170,7 @@ export default function InfinityCustomers() {
             h="130px"
             mx="1rem"
             alignSelf={'center'}
-            bgImage="url('/images/santander.svg')"
+            bgImage="url('/images/santand.svg')"
             bgRepeat="no-repeat"
             bgSize="contain"
             display="flex"
@@ -237,7 +237,7 @@ export default function InfinityCustomers() {
       {isMobile && (
         <Flex h="100%" justify="center" align="center">
           <Swiper
-            speed={1000}
+            speed={200}
             slidesPerView={3}
             pagination={{ clickable: true }}
             style={{

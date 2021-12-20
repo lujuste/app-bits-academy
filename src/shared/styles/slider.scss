@@ -379,3 +379,9 @@ section.section-stars.css-3xm7dh {
     transform: scale(1);
   }
 }
+
+@media (max-width: 365px) {
+  div.btnHomeFlex {
+    transform: translate(0px, 50px);
+  }
+}

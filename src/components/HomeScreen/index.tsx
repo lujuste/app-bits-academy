@@ -158,7 +158,7 @@ const HomeScreen: NextPage = () => {
       </Flex>
 
       <Flex
-        transform={isWideVersion ? 'translateY(100px)' : 'translateY(95px)'}
+        transform={isWideVersion ? 'translateY(100px)' : 'translateY(110px)'}
         w="100%"
         h="auto"
         justify="space-between"
@@ -167,6 +167,7 @@ const HomeScreen: NextPage = () => {
         maxW={['400px', '400px', '400px', '500px', '1010px']}
         mx="auto"
         zIndex={'920'}
+        className="btnHomeFlex"
       >
         {isMobile ? (
           <>
