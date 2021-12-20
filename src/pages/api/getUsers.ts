@@ -12,7 +12,7 @@ export default async function GetUser(
 
   const data = req.body;
 
-  const headers = {
+  const headers: any = {
     method: 'POST',
     'Content-Type': 'application/json',
     'Api-Token': process.env.ACTIVE_CAMPAIGN_TOKEN,
