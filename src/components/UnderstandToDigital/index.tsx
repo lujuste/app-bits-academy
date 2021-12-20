@@ -17,6 +17,8 @@ import {
   SliderThumb,
 } from '@chakra-ui/react';
 
+import NextLink from 'next/link';
+
 import { isSafari, isMobileSafari, isChrome } from 'react-device-detect';
 
 // @ts-ignore: Unreachable code error
@@ -496,53 +498,67 @@ export default function UnderstandToDigital() {
         </Flex>
         {isMobile ? (
           <Fade bottom>
-            <Flex w="100%" h="auto" mx="auto">
-              <Button
-                color="white"
-                px="1rem"
-                bgGradient="linear(to-b, #793399, #4B2076)"
-                maxW={['290px', '220px', '560px']}
-                h="100px"
-                mt="2rem"
-                lineHeight={'27px'}
-                fontWeight="bold"
-                borderRadius="10px"
-                boxShadow="dark-lg"
-                justifyContent="center"
-                alignItems="center"
-                w="100%"
-                fontSize={['1.1rem']}
-                mx="auto"
-                _hover={{
-                  bgGradient: 'linear(to-t, #4B2076, #360666)',
-                }}
-              >
-                QUERO SABER MAIS SOBRE <br /> TRANSFORMAÇÃO DIGITAL
-              </Button>
-            </Flex>
+            <NextLink
+              href="https://api.whatsapp.com/send?phone=5511910534971&text=Quero%20falar%20com%20um%20especialista%20sobre%20Legal%20Design"
+              passHref
+            >
+              <a target="_blank">
+                <Flex w="100%" h="auto" mx="auto">
+                  <Button
+                    color="white"
+                    px="1rem"
+                    bgGradient="linear(to-b, #793399, #4B2076)"
+                    maxW={['290px', '220px', '560px']}
+                    h="100px"
+                    mt="2rem"
+                    lineHeight={'27px'}
+                    fontWeight="bold"
+                    borderRadius="10px"
+                    boxShadow="dark-lg"
+                    justifyContent="center"
+                    alignItems="center"
+                    w="100%"
+                    fontSize={['1.1rem']}
+                    mx="auto"
+                    _hover={{
+                      bgGradient: 'linear(to-t, #4B2076, #360666)',
+                    }}
+                  >
+                    QUERO SABER MAIS SOBRE <br /> TRANSFORMAÇÃO DIGITAL
+                  </Button>
+                </Flex>
+              </a>
+            </NextLink>
           </Fade>
         ) : (
           <Fade bottom>
-            <Flex w="100%" h="auto" mx="auto">
-              <Button
-                color="white"
-                px="1rem"
-                bgGradient="linear(to-b, #793399, #4B2076)"
-                maxW={['320px', '320px', '560px']}
-                h="60px"
-                mt="2rem"
-                justifyContent="center"
-                alignItems="center"
-                w="100%"
-                _hover={{
-                  bgGradient: 'linear(to-t, #4B2076, #360666)',
-                }}
-                fontSize={['0.8rem', '0.5rem', '0.875rem']}
-                mx="auto"
-              >
-                QUERO SABER MAIS SOBRE TRANSFORMAÇÃO DIGITAL
-              </Button>
-            </Flex>
+            <NextLink
+              href="https://api.whatsapp.com/send?phone=5511910534971&text=Quero%20falar%20com%20um%20especialista%20sobre%20Legal%20Design"
+              passHref
+            >
+              <a target="_blank">
+                <Flex w="100%" h="auto" mx="auto">
+                  <Button
+                    color="white"
+                    px="1rem"
+                    bgGradient="linear(to-b, #793399, #4B2076)"
+                    maxW={['320px', '320px', '560px']}
+                    h="60px"
+                    mt="2rem"
+                    justifyContent="center"
+                    alignItems="center"
+                    w="100%"
+                    _hover={{
+                      bgGradient: 'linear(to-t, #4B2076, #360666)',
+                    }}
+                    fontSize={['0.8rem', '0.5rem', '0.875rem']}
+                    mx="auto"
+                  >
+                    QUERO SABER MAIS SOBRE TRANSFORMAÇÃO DIGITAL
+                  </Button>
+                </Flex>
+              </a>
+            </NextLink>
           </Fade>
         )}
       </Flex>

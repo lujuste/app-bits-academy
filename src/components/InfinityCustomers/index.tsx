@@ -7,6 +7,8 @@ import {
   useBreakpointValue,
 } from '@chakra-ui/react';
 
+import NextLink from 'next/link';
+
 // @ts-ignore: Unreachable code error
 import Fade from 'react-reveal/Fade';
 
@@ -330,53 +332,69 @@ export default function InfinityCustomers() {
 
       {!isMobile ? (
         <Fade bottom>
-          <Flex mx="auto" w="100%" h="auto">
-            <Button
-              mx="auto"
-              fontSize="1.25rem"
-              bgGradient="linear(to-b, #793399, #4B2076)"
-              color="white"
-              w="100%"
-              h="100%"
-              p="1.5rem"
-              justifyContent="center"
-              maxW={['200px', '200px', '360px', '474px']}
-              borderRadius="10px"
-              boxShadow="2xl"
-              mt={['0', '0', '0', '0', '-2.5rem']}
-              _hover={{
-                bgGradient: 'linear(to-t, #4B2076, #360666)',
-              }}
-              textAlign="center"
-            >
-              {t.customersbtn}
-            </Button>
-          </Flex>
+          <NextLink
+            href="https://api.whatsapp.com/send?phone=5511910534971&text=Quero%20falar%20com%20um%20especialista%20sobre%20Legal%20Design"
+            passHref
+          >
+            <a target="_blank">
+              <Flex mx="auto" w="100%" h="auto">
+                <Button
+                  mx="auto"
+                  fontSize="1.25rem"
+                  bgGradient="linear(to-b, #793399, #4B2076)"
+                  color="white"
+                  w="100%"
+                  h="100%"
+                  p="1.5rem"
+                  justifyContent="center"
+                  maxW={['200px', '200px', '360px', '474px']}
+                  borderRadius="10px"
+                  _active={{ border: 'none', borderColor: 'none' }}
+                  _focus={{ border: 'none', borderColor: 'none' }}
+                  boxShadow="2xl"
+                  mt={['0', '0', '0', '0', '-2.5rem']}
+                  _hover={{
+                    bgGradient: 'linear(to-t, #4B2076, #360666)',
+                  }}
+                  textAlign="center"
+                >
+                  {t.customersbtn}
+                </Button>
+              </Flex>
+            </a>
+          </NextLink>
         </Fade>
       ) : (
         <Fade bottom>
-          <Flex mx="auto" w="100%" h="auto">
-            <Button
-              mx="auto"
-              fontSize="1.25rem"
-              bgGradient="linear(to-b, #793399, #4B2076)"
-              color="white"
-              w="100%"
-              h="100%"
-              p="0.75rem"
-              justifyContent="center"
-              maxW={['285px', '285px', '360px', '474px']}
-              borderRadius="10px"
-              boxShadow="2xl"
-              mt="3rem"
-              textAlign="center"
-              _hover={{
-                bgGradient: 'linear(to-t, #4B2076, #360666)',
-              }}
-            >
-              {t.customersbtn1} <br /> {t.customersbtn2}
-            </Button>
-          </Flex>
+          <NextLink
+            href="https://api.whatsapp.com/send?phone=5511910534971&text=Quero%20falar%20com%20um%20especialista%20sobre%20Legal%20Design"
+            passHref
+          >
+            <a target="_blank">
+              <Flex mx="auto" w="100%" h="auto">
+                <Button
+                  mx="auto"
+                  fontSize="1.25rem"
+                  bgGradient="linear(to-b, #793399, #4B2076)"
+                  color="white"
+                  w="100%"
+                  h="100%"
+                  p="0.75rem"
+                  justifyContent="center"
+                  maxW={['285px', '285px', '360px', '474px']}
+                  borderRadius="10px"
+                  boxShadow="2xl"
+                  mt="3rem"
+                  textAlign="center"
+                  _hover={{
+                    bgGradient: 'linear(to-t, #4B2076, #360666)',
+                  }}
+                >
+                  {t.customersbtn1} <br /> {t.customersbtn2}
+                </Button>
+              </Flex>
+            </a>
+          </NextLink>
         </Fade>
       )}
     </Flex>
