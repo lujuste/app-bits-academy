@@ -29,6 +29,8 @@ import IconBitsWhite from '../IconBitsWhite';
 import { ChevronDownIcon } from '@chakra-ui/icons';
 import { useTranslate } from '../../../contexts/Translate';
 
+import NextLink from 'next/link';
+
 import { toast } from 'react-toastify';
 
 import { useForm, SubmitHandler } from 'react-hook-form';
@@ -334,9 +336,39 @@ export default function Footer() {
                   </Flex>
 
                   <Flex mt="1rem" maxW="100px" w="100%" justify="space-between">
-                    <IconInstagram />
-                    <IconFacebook />
-                    <IconLinkedin />
+                    <NextLink
+                      href="https://www.instagram.com/bitsacademy/"
+                      passHref
+                    >
+                      <a target="_blank">
+                        <Flex cursor="pointer">
+                          {' '}
+                          <IconInstagram />
+                        </Flex>
+                      </a>
+                    </NextLink>
+                    <NextLink
+                      href="https://www.facebook.com/BITS-Academy-101187194799339/"
+                      passHref
+                    >
+                      <a target="_blank">
+                        <Flex cursor="pointer">
+                          <IconFacebook />
+                        </Flex>
+                      </a>
+                    </NextLink>
+
+                    <NextLink
+                      href="https://www.linkedin.com/company/bitsacademy"
+                      passHref
+                    >
+                      <a target="_blank">
+                        <Flex>
+                          {' '}
+                          <IconLinkedin />
+                        </Flex>
+                      </a>
+                    </NextLink>
                   </Flex>
                 </GridItem>
               </Grid>
@@ -537,9 +569,36 @@ export default function Footer() {
               w="100%"
               justifyContent="space-between"
             >
-              <IconInstagram />
-              <IconFacebook />
-              <IconLinkedin />
+              <NextLink href="https://www.instagram.com/bitsacademy/" passHref>
+                <a target="_blank">
+                  <Flex cursor="pointer">
+                    {' '}
+                    <IconInstagram />
+                  </Flex>
+                </a>
+              </NextLink>
+              <NextLink
+                href="https://www.facebook.com/BITS-Academy-101187194799339/"
+                passHref
+              >
+                <a target="_blank">
+                  <Flex cursor="pointer">
+                    <IconFacebook />
+                  </Flex>
+                </a>
+              </NextLink>
+
+              <NextLink
+                href="https://www.linkedin.com/company/bitsacademy"
+                passHref
+              >
+                <a target="_blank">
+                  <Flex>
+                    {' '}
+                    <IconLinkedin />
+                  </Flex>
+                </a>
+              </NextLink>
             </Flex>
             <Flex mt={['2rem']} maxW="300px" w="100%" color="white" mx="auto">
               <Text

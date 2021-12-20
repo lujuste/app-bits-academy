@@ -97,7 +97,11 @@ export default function Header() {
               : {}
           }
         >
-          <IconBitsWhite />
+          <NextLink href="/" passHref>
+            <Flex cursor="pointer">
+              <IconBitsWhite />
+            </Flex>
+          </NextLink>
         </Flex>
 
         <Flex
