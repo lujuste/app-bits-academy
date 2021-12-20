@@ -14,9 +14,11 @@ import Fade from 'react-reveal/Fade';
 
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
-
+import SantanderIcon from '../../../public/images/santand.svg';
+import { Icon } from '@chakra-ui/react';
 import Marquee from 'react-fast-marquee';
 import { useTranslate } from '../../contexts/Translate';
+import IfoodIcon from '../IfoodIcon';
 
 const data = {
   company: [
@@ -41,8 +43,8 @@ const data = {
       logo: 'bndes',
     },
     {
-      name: 'kraftheinz',
-      logo: 'kraftheinz',
+      name: 'kraft',
+      logo: 'kraft',
     },
     {
       name: 'santand',
@@ -122,16 +124,16 @@ export default function InfinityCustomers() {
             marginTop: '1.5rem',
             height: '100%',
             overflow: 'hidden',
-
+            justifyContent: 'space-around',
             alignItems: 'center',
           }}
           pauseOnHover={true}
         >
           <Box
-            w="200px"
-            h="130px"
-            mx="1rem"
-            bgImage="url('/images/globo.svg')"
+            w="130px"
+            h="100px"
+            mx="auto"
+            bgImage="url('/images/equatorialCustomer.svg')"
             bgRepeat="no-repeat"
             bgSize="contain"
             display="flex"
@@ -141,11 +143,11 @@ export default function InfinityCustomers() {
             overflow="hidden"
           ></Box>
           <Box
-            w="200px"
-            h="130px"
-            mx="1rem"
+            w="130px"
+            h="100px"
+            mx="auto"
             alignSelf={'center'}
-            bgImage="url('/images/bndes.svg')"
+            bgImage="url('/images/ifoodCustomer.svg')"
             bgRepeat="no-repeat"
             bgSize="contain"
             display="flex"
@@ -154,10 +156,24 @@ export default function InfinityCustomers() {
             py="auto"
           ></Box>
           <Box
-            w="200px"
-            h="130px"
-            mx="1rem"
-            bgImage="url('/images/equatorial2.svg')"
+            w="130px"
+            h="100px"
+            mx="auto"
+            bgImage="url('/images/equatorialCustomer.svg')"
+            bgRepeat="no-repeat"
+            bgSize="contain"
+            display="flex"
+            alignSelf={'center'}
+            justifyContent="center"
+            py="auto"
+            overflow="hidden"
+          ></Box>
+          <Box
+            w="130px"
+            h="100px"
+            mx="auto"
+            alignSelf={'center'}
+            bgImage="url('/images/ifoodCustomer.svg')"
             bgRepeat="no-repeat"
             bgSize="contain"
             display="flex"
@@ -166,11 +182,24 @@ export default function InfinityCustomers() {
             py="auto"
           ></Box>
           <Box
-            w="200px"
-            h="130px"
-            mx="1rem"
+            w="130px"
+            h="100px"
+            mx="auto"
+            bgImage="url('/images/equatorialCustomer.svg')"
+            bgRepeat="no-repeat"
+            bgSize="contain"
+            display="flex"
             alignSelf={'center'}
-            bgImage="url('/images/santand.svg')"
+            justifyContent="center"
+            py="auto"
+            overflow="hidden"
+          ></Box>
+          <Box
+            w="130px"
+            h="100px"
+            mx="auto"
+            alignSelf={'center'}
+            bgImage="url('/images/ifoodCustomer.svg')"
             bgRepeat="no-repeat"
             bgSize="contain"
             display="flex"
@@ -179,54 +208,27 @@ export default function InfinityCustomers() {
             py="auto"
           ></Box>
           <Box
-            w="200px"
-            h="130px"
-            mx="1rem"
-            alignSelf={'center'}
-            bgImage="url('/images/ifood.svg')"
+            w="130px"
+            h="100px"
+            mx="auto"
+            bgImage="url('/images/equatorialCustomer.svg')"
             bgRepeat="no-repeat"
             bgSize="contain"
             display="flex"
-            align="center"
+            alignSelf={'center'}
             justifyContent="center"
             py="auto"
+            overflow="hidden"
           ></Box>
           <Box
-            w="200px"
-            h="130px"
-            mx="1rem"
+            w="130px"
+            h="100px"
+            mx="auto"
             alignSelf={'center'}
-            bgImage="url('/images/kraftheinz.svg')"
+            bgImage="url('/images/ifoodCustomer.svg')"
             bgRepeat="no-repeat"
             bgSize="contain"
             display="flex"
-            align="center"
-            justifyContent="center"
-            py="auto"
-          ></Box>
-
-          <Box
-            w="200px"
-            h="130px"
-            mx="1rem"
-            alignSelf={'center'}
-            bgImage="url('/images/arcelor-mittal.svg')"
-            bgRepeat="no-repeat"
-            bgSize="contain"
-            display="flex"
-            align="center"
-            justifyContent="center"
-            py="auto"
-          ></Box>
-          <Box
-            w="200px"
-            h="130px"
-            mx="1rem"
-            bgImage="url('/images/background-brasil.svg')"
-            bgRepeat="no-repeat"
-            bgSize="contain"
-            display="flex"
-            alignSelf={'center'}
             align="center"
             justifyContent="center"
             py="auto"

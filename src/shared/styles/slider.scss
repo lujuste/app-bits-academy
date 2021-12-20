@@ -263,8 +263,8 @@ section.section-stars.css-3xm7dh {
   svg {
     z-index: -10000;
     background-clip: border-box;
-    stroke: #cc3366;
-    opacity: 0.16;
+    stroke: #f1e1e7;
+    opacity: 0.1;
     width: 1283px;
     height: 79vh;
   }
@@ -315,7 +315,6 @@ section.section-stars.css-3xm7dh {
       right: 80;
       animation-delay: 0s;
       animation-duration: 2s;
-      background-color: yellow;
     }
   }
 
@@ -380,8 +379,20 @@ section.section-stars.css-3xm7dh {
   }
 }
 
-@media (max-width: 365px) {
+@media (max-width: 375px) {
   div.btnHomeFlex {
-    transform: translate(0px, 50px);
+    transform: translate(0px, 45px);
+  }
+  h2.chakra-heading.css-1qrs5l0 {
+    transform: translate(0px, 0px);
+  }
+}
+
+@media (max-width: 325px) {
+  div.btnHomeFlex {
+    transform: translate(0px, -25px);
+  }
+  h2.chakra-heading.css-1qrs5l0 {
+    transform: translate(0px, -26px);
   }
 }
