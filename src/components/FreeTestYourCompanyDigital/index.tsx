@@ -1,5 +1,6 @@
 import { useBreakpointValue, Text, Button } from '@chakra-ui/react';
 import { useTranslate } from '../../contexts/Translate';
+import NextLink from 'next/link';
 
 interface IFreeTestYourCompanyDigitalProps {
   title?: string;
@@ -33,21 +34,24 @@ export default function FreeTestYourCompanyDigital({
           >
             {t.header1}
           </Text>
-          <Button
-            mt="1rem"
-            mx="auto"
-            boxShadow="2xl"
-            w="260px"
-            h="62px"
-            borderRadius="12px"
-            bgGradient="linear(to-r, #DFDFDF, #FFF)"
-            fontFamily="Roboto"
-            fontSize="1.1rem"
-            color="purple.500"
-            fontWeight="700"
-          >
-            {t.btnheader}
-          </Button>
+
+          <NextLink href="https://bitsacademy.typeform.com/to/xLZQ5s" passHref>
+            <Button
+              mt="1rem"
+              mx="auto"
+              boxShadow="2xl"
+              w="260px"
+              h="62px"
+              borderRadius="12px"
+              bgGradient="linear(to-r, #DFDFDF, #FFF)"
+              fontFamily="Roboto"
+              fontSize="1.1rem"
+              color="purple.500"
+              fontWeight="700"
+            >
+              {t.btnheader}
+            </Button>
+          </NextLink>
         </>
       )}
     </>

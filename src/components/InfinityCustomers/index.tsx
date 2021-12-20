@@ -7,6 +7,9 @@ import {
   useBreakpointValue,
 } from '@chakra-ui/react';
 
+// @ts-ignore: Unreachable code error
+import Fade from 'react-reveal/Fade';
+
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -17,7 +20,7 @@ const data = {
   company: [
     {
       name: 'globo',
-      logo: 'globo',
+      logo: 'equatorial',
     },
     {
       name: 'globo',
@@ -25,23 +28,23 @@ const data = {
     },
     {
       name: 'globo',
-      logo: 'globo',
+      logo: 'ifood',
     },
     {
       name: 'globo',
-      logo: 'globo',
+      logo: 'arcelor-mittal',
     },
     {
       name: 'globo',
-      logo: 'globo',
+      logo: 'bndes',
     },
     {
       name: 'globo',
-      logo: 'globo',
+      logo: 'kraftheinz',
     },
     {
       name: 'globo',
-      logo: 'globo',
+      logo: 'santander',
     },
   ],
 };
@@ -66,23 +69,25 @@ export default function InfinityCustomers() {
       flexDir="column"
       mb="10rem"
     >
-      <Text
-        maxW={['200px', '290px', '500px', '800px', '1200px']}
-        mx="auto"
-        fontSize={['1.575rem', '1.575rem', '1.875rem', '2rem', '3rem']}
-        mt={['3rem', '3rem', '10rem', '5rem', '10rem']}
-        fontFamily="Maven Pro"
-        textAlign={['center', 'center', 'center', 'center']}
-      >
-        {t.titlecustomers1}{' '}
-        <Text as="span" color="purple.500">
-          {t.titlecustomers2}
-        </Text>{' '}
-        {t.titlecustomers3}{' '}
-        <Text as="span" color="purple.500">
-          {t.titlecustomers4}
+      <Fade bottom>
+        <Text
+          maxW={['200px', '290px', '500px', '800px', '1200px']}
+          mx="auto"
+          fontSize={['1.575rem', '1.575rem', '1.875rem', '2rem', '3rem']}
+          mt={['3rem', '3rem', '10rem', '5rem', '10rem']}
+          fontFamily="Maven Pro"
+          textAlign={['center', 'center', 'center', 'center']}
+        >
+          {t.titlecustomers1}{' '}
+          <Text as="span" color="purple.500">
+            {t.titlecustomers2}
+          </Text>{' '}
+          {t.titlecustomers3}{' '}
+          <Text as="span" color="purple.500">
+            {t.titlecustomers4}
+          </Text>
         </Text>
-      </Text>
+      </Fade>
 
       {!isMobile && (
         /*  <Flex px="2rem" mx="auto">
@@ -115,11 +120,12 @@ export default function InfinityCustomers() {
             marginTop: '1.5rem',
             height: '100%',
             overflow: 'hidden',
+
+            alignItems: 'center',
           }}
           pauseOnHover={true}
         >
           <Box
-            as="image"
             w="200px"
             h="130px"
             mx="1rem"
@@ -127,6 +133,7 @@ export default function InfinityCustomers() {
             bgRepeat="no-repeat"
             bgSize="contain"
             display="flex"
+            alignSelf={'center'}
             justifyContent="center"
             py="auto"
             overflow="hidden"
@@ -135,7 +142,8 @@ export default function InfinityCustomers() {
             w="200px"
             h="130px"
             mx="1rem"
-            bgImage="url('/images/globo.svg')"
+            alignSelf={'center'}
+            bgImage="url('/images/bndes.svg')"
             bgRepeat="no-repeat"
             bgSize="contain"
             display="flex"
@@ -147,7 +155,7 @@ export default function InfinityCustomers() {
             w="200px"
             h="130px"
             mx="1rem"
-            bgImage="url('/images/globo.svg')"
+            bgImage="url('/images/equatorial2.svg')"
             bgRepeat="no-repeat"
             bgSize="contain"
             display="flex"
@@ -159,7 +167,8 @@ export default function InfinityCustomers() {
             w="200px"
             h="130px"
             mx="1rem"
-            bgImage="url('/images/globo.svg')"
+            alignSelf={'center'}
+            bgImage="url('/images/ifood.svg')"
             bgRepeat="no-repeat"
             bgSize="contain"
             display="flex"
@@ -171,7 +180,8 @@ export default function InfinityCustomers() {
             w="200px"
             h="130px"
             mx="1rem"
-            bgImage="url('/images/globo.svg')"
+            alignSelf={'center'}
+            bgImage="url('/images/kraftheinz.svg')"
             bgRepeat="no-repeat"
             bgSize="contain"
             display="flex"
@@ -183,7 +193,8 @@ export default function InfinityCustomers() {
             w="200px"
             h="130px"
             mx="1rem"
-            bgImage="url('/images/globo.svg')"
+            alignSelf={'center'}
+            bgImage="url('/images/santander.svg')"
             bgRepeat="no-repeat"
             bgSize="contain"
             display="flex"
@@ -195,7 +206,8 @@ export default function InfinityCustomers() {
             w="200px"
             h="130px"
             mx="1rem"
-            bgImage="url('/images/globo.svg')"
+            alignSelf={'center'}
+            bgImage="url('/images/arcelor-mittal.svg')"
             bgRepeat="no-repeat"
             bgSize="contain"
             display="flex"
@@ -207,10 +219,11 @@ export default function InfinityCustomers() {
             w="200px"
             h="130px"
             mx="1rem"
-            bgImage="url('/images/globo.svg')"
+            bgImage="url('/images/background-brasil.svg')"
             bgRepeat="no-repeat"
             bgSize="contain"
             display="flex"
+            alignSelf={'center'}
             align="center"
             justifyContent="center"
             py="auto"
@@ -226,11 +239,12 @@ export default function InfinityCustomers() {
             pagination={{ clickable: true }}
             style={{
               width: '100%',
-              justifyContent: 'space-around',
+              justifyContent: 'center',
               alignItems: 'center',
               flex: '1',
+              height: '140px',
             }}
-            initialSlide={3}
+            initialSlide={1}
             modules={[Navigation, Pagination, A11y]}
             spaceBetween={5}
             centeredSlides={true}
@@ -315,47 +329,55 @@ export default function InfinityCustomers() {
       )}
 
       {!isMobile ? (
-        <Button
-          mx="auto"
-          fontSize="1.25rem"
-          bgGradient="linear(to-b, #793399, #4B2076)"
-          color="white"
-          w="100%"
-          h="100%"
-          p="1.5rem"
-          justifyContent="center"
-          maxW={['200px', '200px', '360px', '474px']}
-          borderRadius="10px"
-          boxShadow="2xl"
-          mt={['0', '0', '0', '0', '-3.5rem']}
-          _hover={{
-            bgGradient: 'linear(to-t, #4B2076, #360666)',
-          }}
-          textAlign="center"
-        >
-          {t.customersbtn}
-        </Button>
+        <Fade bottom>
+          <Flex mx="auto" w="100%" h="auto">
+            <Button
+              mx="auto"
+              fontSize="1.25rem"
+              bgGradient="linear(to-b, #793399, #4B2076)"
+              color="white"
+              w="100%"
+              h="100%"
+              p="1.5rem"
+              justifyContent="center"
+              maxW={['200px', '200px', '360px', '474px']}
+              borderRadius="10px"
+              boxShadow="2xl"
+              mt={['0', '0', '0', '0', '-2.5rem']}
+              _hover={{
+                bgGradient: 'linear(to-t, #4B2076, #360666)',
+              }}
+              textAlign="center"
+            >
+              {t.customersbtn}
+            </Button>
+          </Flex>
+        </Fade>
       ) : (
-        <Button
-          mx="auto"
-          fontSize="1.25rem"
-          bgGradient="linear(to-b, #793399, #4B2076)"
-          color="white"
-          w="100%"
-          h="100%"
-          p="0.75rem"
-          justifyContent="center"
-          maxW={['285px', '285px', '360px', '474px']}
-          borderRadius="10px"
-          boxShadow="2xl"
-          mt="3rem"
-          textAlign="center"
-          _hover={{
-            bgGradient: 'linear(to-t, #4B2076, #360666)',
-          }}
-        >
-          {t.customersbtn1} <br /> {t.customersbtn2}
-        </Button>
+        <Fade bottom>
+          <Flex mx="auto" w="100%" h="auto">
+            <Button
+              mx="auto"
+              fontSize="1.25rem"
+              bgGradient="linear(to-b, #793399, #4B2076)"
+              color="white"
+              w="100%"
+              h="100%"
+              p="0.75rem"
+              justifyContent="center"
+              maxW={['285px', '285px', '360px', '474px']}
+              borderRadius="10px"
+              boxShadow="2xl"
+              mt="3rem"
+              textAlign="center"
+              _hover={{
+                bgGradient: 'linear(to-t, #4B2076, #360666)',
+              }}
+            >
+              {t.customersbtn1} <br /> {t.customersbtn2}
+            </Button>
+          </Flex>
+        </Fade>
       )}
     </Flex>
   );

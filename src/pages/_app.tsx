@@ -20,6 +20,8 @@ import 'swiper/css/scrollbar';
 
 import '@fontsource/baloo-bhaina-2';
 import { TranslateProvider } from '../contexts/Translate';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const myTheme = extendTheme(theme);
 
@@ -40,6 +42,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       <ChakraProvider theme={myTheme} resetCSS>
         <SidebarDrawerProvider>
           <TranslateProvider>
+            <ToastContainer />
             <Component {...pageProps} />
           </TranslateProvider>
         </SidebarDrawerProvider>

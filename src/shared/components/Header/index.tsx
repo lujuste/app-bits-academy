@@ -1,6 +1,5 @@
 import {
   Flex,
-  Icon,
   Text,
   Button,
   Menu,
@@ -29,6 +28,8 @@ import {
 import { useState, useEffect } from 'react';
 import router, { useRouter } from 'next/router';
 import { useTranslation } from 'react-i18next';
+
+import NextLink from 'next/link';
 
 import MobileNav from './MobileNav';
 
@@ -119,23 +120,30 @@ export default function Header() {
               >
                 {t.header1}
               </Text>
-              <Button
-                mx="auto"
-                boxShadow="lg"
-                w="250px"
-                h="52px"
-                bgGradient="linear(to-t, #c7c5c5, #FFF)"
-                fontFamily="Roboto"
-                fontWeigth="700"
-                transition={'ease-in-out'}
-                fontSize="1rem"
-                _hover={{
-                  bgGradient: 'linear(to-t, white, white )',
-                }}
-                color="purple.500"
+              <NextLink
+                href="https://bitsacademy.typeform.com/to/xLZQ5s"
+                passHref
               >
-                {t.btnheader}
-              </Button>
+                <Button
+                  mx="auto"
+                  boxShadow="lg"
+                  w="250px"
+                  h="52px"
+                  _active={{ border: 'none', borderColor: 'transparent' }}
+                  _focus={{ border: 'none', borderColor: 'transparent' }}
+                  bgGradient="linear(to-t, #c7c5c5, #FFF)"
+                  fontFamily="Roboto"
+                  fontWeigth="700"
+                  transition={'ease-in-out'}
+                  fontSize="1rem"
+                  _hover={{
+                    bgGradient: 'linear(to-t, white, white )',
+                  }}
+                  color="purple.500"
+                >
+                  {t.btnheader}
+                </Button>
+              </NextLink>
             </>
           )}
         </Flex>
@@ -148,61 +156,61 @@ export default function Header() {
             ml="auto"
             align="center"
           >
-            <Menu isOpen={isOpen}>
-              <MenuButton
-                py={2}
-                as="button"
-                transition="all 0.4s"
-                _hover={{ border: 'none', borderColor: 'transparent' }}
-                _active={{ border: 'none', borderColor: 'transparent' }}
-                _expanded={{ bg: 'transparent', borderColor: 'transparent' }}
-                _focus={{ border: 'none', borderColor: 'transparent' }}
-                bgColor="transparent"
-                border="none"
-                onMouseEnter={onOpen}
-                onMouseLeave={onClose}
-                sx={{
-                  color: 'white',
-                }}
-              >
-                {english === false ? (
-                  <Text as="span" color="white">
-                    PT
-                  </Text>
-                ) : (
-                  <Text as="span" color="white">
-                    EN
-                  </Text>
-                )}{' '}
-                {isOpen ? (
-                  <ChevronUpIcon color="white" />
-                ) : (
-                  <ChevronDownIcon color="white" />
-                )}
-              </MenuButton>
-              <MenuList
-                onMouseEnter={onOpen}
-                onMouseLeave={onClose}
-                p={0}
-                display={'flex'}
-                minW="0"
-                flexDir="column"
-                w={'130px'}
-                bgColor="#fff"
-                mr="1.9rem"
-              >
-                <MenuItem
-                  onClick={translateMode}
-                  _hover={{
-                    color: 'purple.500',
-                    fontWeight: 'regular',
-                    transition: 'all ease 0.1s',
-                  }}
-                >
-                  {english === false ? 'Inglês' : 'Português'}
-                </MenuItem>
-              </MenuList>
-            </Menu>
+            {/* <Menu isOpen={isOpen}>
+               <MenuButton
+                 py={2}
+                 as="button"
+                 transition="all 0.4s"
+                 _hover={{ border: 'none', borderColor: 'transparent' }}
+                 _active={{ border: 'none', borderColor: 'transparent' }}
+                 _expanded={{ bg: 'transparent', borderColor: 'transparent' }}
+                 _focus={{ border: 'none', borderColor: 'transparent' }}
+                 bgColor="transparent"
+                 border="none"
+                 onMouseEnter={onOpen}
+                 onMouseLeave={onClose}
+                 sx={{
+                   color: 'white',
+                 }}
+               >
+                 {english === false ? (
+                   <Text as="span" color="white">
+                     PT
+                   </Text>
+                 ) : (
+                   <Text as="span" color="white">
+                     EN
+                   </Text>
+                 )}{' '}
+                 {isOpen ? (
+                   <ChevronUpIcon color="white" />
+                 ) : (
+                   <ChevronDownIcon color="white" />
+                 )}
+               </MenuButton>
+               <MenuList
+                 onMouseEnter={onOpen}
+                 onMouseLeave={onClose}
+                 p={0}
+                 display={'flex'}
+                 minW="0"
+                 flexDir="column"
+                 w={'130px'}
+                 bgColor="#fff"
+                 mr="1.9rem"
+               >
+                 <MenuItem
+                   onClick={translateMode}
+                   _hover={{
+                     color: 'purple.500',
+                     fontWeight: 'regular',
+                     transition: 'all ease 0.1s',
+                   }}
+                 >
+                   {english === false ? 'Inglês' : 'Português'}
+                 </MenuItem>
+               </MenuList>
+             </Menu> */}
 
             <Center w={1} height="25px">
               <Divider orientation="vertical" />

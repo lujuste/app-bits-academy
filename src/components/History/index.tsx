@@ -13,6 +13,9 @@ import timelineIcon from '../../../public/images/iconn.svg';
 import timelineIconMobile from '../../../public/images/icon-mobile.svg';
 import { useTranslate } from '../../contexts/Translate';
 
+// @ts-ignore: Unreachable code error
+import Fade from 'react-reveal/Fade';
+
 export default function History() {
   const { t }: any = useTranslate();
 
@@ -47,56 +50,65 @@ export default function History() {
         ]}
       >
         <GridItem>
-          <Heading
-            px={['1rem', '1rem', '0']}
-            maxW="574px"
-            fontSize={['1.563rem', '1.563rem', '2.813rem']}
-            fontFamily="Maven Pro"
-            h="auto"
-            mt={['-4rem', '-3rem', '0', '0']}
-            textAlign={['center', 'center', 'left']}
-          >
-            {t.history1}{' '}
-            <Text color="purple.500" as="span">
-              {t.titlebitsacademy}
-            </Text>{' '}
-            {t.titlehistory2}{' '}
-            <Text as="span" color="purple.500">
-              {t.titlehistory3}{' '}
+          <Fade bottom>
+            <Heading
+              px={['1rem', '1rem', '0']}
+              maxW="574px"
+              fontSize={['1.563rem', '1.563rem', '2.813rem']}
+              fontFamily="Maven Pro"
+              h="auto"
+              mt={['-4rem', '-3rem', '0', '0']}
+              textAlign={['center', 'center', 'left']}
+            >
+              {t.history1}{' '}
+              <Text color="purple.500" as="span">
+                {t.titlebitsacademy}
+              </Text>{' '}
+              {t.titlehistory2}{' '}
+              <Text as="span" color="purple.500">
+                {t.titlehistory3}{' '}
+              </Text>
+              {t.titlehistory4}
+            </Heading>
+          </Fade>
+
+          <Fade bottom>
+            <Text
+              fontFamily="Maven Pro"
+              fontWeight="400"
+              color="#666666"
+              textAlign={['center', 'center', 'left']}
+              mt={['2rem']}
+              maxW="600px"
+              px={['1rem', '1rem', '0']}
+            >
+              {t.titlehistory5}
             </Text>
-            {t.titlehistory4}
-          </Heading>
-          <Text
-            fontFamily="Maven Pro"
-            fontWeight="400"
-            color="#666666"
-            textAlign={['center', 'center', 'left']}
-            mt={['2rem']}
-            maxW="600px"
-            px={['1rem', '1rem', '0']}
-          >
-            {t.titlehistory5}
-          </Text>
+          </Fade>
         </GridItem>
         <GridItem>
           {!isMobile ? (
             <Flex mx="auto" justify="center" w="100%" h="auto">
-              <Box
+              <Fade bottom>
+                <Box
+                  mt={['-3rem', '-2rem', '0']}
+                  maxW={['400px']}
+                  h="500px"
+                  as={isMobile ? timelineIconMobile : timelineIcon}
+                ></Box>
+              </Fade>
+            </Flex>
+          ) : (
+            <Fade bottom>
+              <Flex
                 mt={['-3rem', '-2rem', '0']}
                 maxW={['400px']}
                 h="500px"
-                as={isMobile ? timelineIconMobile : timelineIcon}
-              ></Box>
-            </Flex>
-          ) : (
-            <Flex
-              mt={['-3rem', '-2rem', '0']}
-              maxW={['400px']}
-              h="500px"
-              bgImage="url('/images/timelineMobile.webp')"
-              bgSize="contain"
-              bgRepeat="no-repeat"
-            ></Flex>
+                bgImage="url('/images/timelineMobile.webp')"
+                bgSize="contain"
+                bgRepeat="no-repeat"
+              ></Flex>
+            </Fade>
           )}
         </GridItem>
       </Grid>

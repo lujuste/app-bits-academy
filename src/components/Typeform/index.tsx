@@ -19,7 +19,7 @@ export default function Typeform() {
         id="KVMIdCRx"
         style={{
           width: '100% !important',
-          height: '680px',
+          minHeight: '720px',
           zIndex: '900 !important',
           overflowY: 'hidden',
           borderRadius: '0px !important',

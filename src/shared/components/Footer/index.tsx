@@ -29,11 +29,92 @@ import IconBitsWhite from '../IconBitsWhite';
 import { ChevronDownIcon } from '@chakra-ui/icons';
 import { useTranslate } from '../../../contexts/Translate';
 
+import { toast } from 'react-toastify';
+
+import { useForm, SubmitHandler } from 'react-hook-form';
+import * as yup from 'yup';
+import { FieldError } from 'react-hook-form';
+import { yupResolver } from '@hookform/resolvers/yup';
+import { useState } from 'react';
+
+interface InputProps {
+  email?: string;
+  errors?: FieldError;
+}
+
+interface IDataProps {
+  contact: {
+    email: string;
+  };
+}
+
 export default function Footer() {
+  const [loading, setLoading] = useState(false);
+  const [data, setData] = useState({});
   const { english, setEnglish }: any = useTranslate();
   function translateMode() {
     setEnglish(!english);
   }
+
+  function toastSucess() {
+    toast.success('Sucesso! Obrigado pelo contato.', {
+      position: toast.POSITION.BOTTOM_CENTER,
+    });
+  }
+
+  function tostFailure() {
+    toast.error('Este email já está cadastrado!', {
+      position: toast.POSITION.BOTTOM_CENTER,
+    });
+  }
+
+  const formSchema = yup.object().shape({
+    email: yup.string().required('Email obrigatório.').email('Email inválido.'),
+  });
+
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm({
+    resolver: yupResolver(formSchema),
+  });
+
+  const headers = {
+    method: 'POST',
+    'Content-Type': 'application/json',
+  };
+
+  const onSubmit: SubmitHandler<InputProps> = async (data) => {
+    const dataFormatted = JSON.stringify({
+      contact: {
+        email: data.email,
+      },
+    });
+
+    try {
+      setLoading(true);
+      console.log(dataFormatted);
+
+      await fetch('/api/getUsers', {
+        method: 'POST',
+        headers,
+        body: dataFormatted,
+      })
+        .then((response) => response.json())
+        .then(toastSucess)
+        .catch((error) => {
+          console.log(error);
+          tostFailure();
+        });
+      setLoading(false);
+    } catch (err) {
+      console.log(err);
+      tostFailure();
+    }
+  };
+
+  console.log(errors);
 
   const isWideVersion = useBreakpointValue({
     base: false,
@@ -80,7 +161,7 @@ export default function Footer() {
                     <Box mb="0.5rem">
                       <IconBitsWhite />
                     </Box>
-                    <Divider
+                    {/* <Divider
                       border="1px"
                       borderColor="white"
                       pt="1.2rem"
@@ -136,7 +217,7 @@ export default function Footer() {
                           </MenuItem>
                         </MenuList>
                       </>
-                    </Menu>
+                    </Menu> */}
                   </HStack>
 
                   <Text color="white">Saiba onde nos encontrar</Text>
@@ -203,7 +284,13 @@ export default function Footer() {
                   </List>
                 </GridItem>
                 <GridItem>
-                  <Flex mt="2rem" as="form" method="post" flexDir="column">
+                  <Flex
+                    mt="2rem"
+                    as="form"
+                    method="post"
+                    onSubmit={handleSubmit(onSubmit)}
+                    flexDir="column"
+                  >
                     <Text
                       as="h4"
                       fontSize="16px"
@@ -218,9 +305,10 @@ export default function Footer() {
                     <Input
                       mb="0.5rem"
                       id="email"
-                      name="email"
                       type="email"
                       label="Seu email"
+                      {...register('email')}
+                      error={errors.email}
                     />
 
                     <Button
@@ -228,12 +316,20 @@ export default function Footer() {
                       color="#fff"
                       h="45px"
                       mt="0.2rem"
+                      transition="bgGradient ease-in 200ms"
                       bgGradient="linear(to-t, #793399, #4B2076)"
-                      _hover={{ bgColor: 'green.900' }}
                       type="submit"
+                      _hover={{
+                        bgGradient: 'linear(to-t, #9f47c7, #6f38a7)',
+                      }}
+                      _active={{ border: 'none', borderColor: 'transparent' }}
+                      _focus={{
+                        border: 'none',
+                        borderColor: 'transparent',
+                      }}
                       boxShadow="2xl"
                     >
-                      Enviar
+                      {loading ? <Spinner /> : 'Enviar'}
                     </Button>
                   </Flex>
 
@@ -405,7 +501,7 @@ export default function Footer() {
                 </List>
               </Flex>
             </Flex>
-            <Flex as="form" flexDir="column">
+            <Flex as="form" onSubmit={handleSubmit(onSubmit)} flexDir="column">
               <Heading
                 mt="1.5rem"
                 fontFamily="Roboto"
@@ -418,9 +514,10 @@ export default function Footer() {
               <Input
                 mb="0.5rem"
                 id="email"
-                name="email"
+                {...register('email')}
                 type="email"
                 label="Seu email"
+                error={errors.email}
                 h="60px"
               />
               <Button
@@ -431,7 +528,7 @@ export default function Footer() {
                 _hover={{ bgColor: 'green.900' }}
                 type="submit"
               >
-                Enviar
+                {loading ? <Spinner /> : 'Enviar'}
               </Button>
             </Flex>
             <Flex

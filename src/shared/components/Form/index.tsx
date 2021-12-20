@@ -54,6 +54,9 @@ const InputBase: ForwardRefRenderFunction<HTMLInputElement, InputProps> = (
         _placeholder={{
           color: '#868887',
         }}
+        hover={{
+          bgColor: 'white',
+        }}
         _focus={{
           bgColor: 'white',
           textColor: 'black',

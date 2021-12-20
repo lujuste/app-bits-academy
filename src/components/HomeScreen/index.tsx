@@ -1,6 +1,7 @@
 import { NextPage } from 'next';
 import { Flex, Heading, Text, useBreakpointValue, Box } from '@chakra-ui/react';
-
+// @ts-ignore: Unreachable code error
+import Fade from 'react-reveal/Fade';
 import '@fontsource/baloo-bhaina-2';
 import RaysIcon from '../RaysIcon/index';
 import HomeButton from '../HomeButton';
@@ -12,6 +13,33 @@ import { useTranslate } from '../../contexts/Translate';
 import RaysIconMobile from '../RaysIconMobile';
 
 const HomeScreen: NextPage = () => {
+  function scrollToYes() {
+    window.scrollTo({
+      top: 3150,
+      behavior: 'smooth',
+    });
+  }
+  function scrollToYesMobile() {
+    window.scrollTo({
+      top: 100,
+      behavior: 'smooth',
+    });
+  }
+
+  function scrollToNo() {
+    window.scrollTo({
+      top: 1900,
+      behavior: 'smooth',
+    });
+  }
+
+  function scrollToNoMobile() {
+    window.scrollTo({
+      top: 100,
+      behavior: 'smooth',
+    });
+  }
+
   const router = useRouter();
   const { t }: any = useTranslate();
 
@@ -105,26 +133,28 @@ const HomeScreen: NextPage = () => {
         h="100%"
       >
         <IFreeTestYourCompanyDigitalProps />
-        <Heading
-          color="white"
-          fontSize={['2.188rem', '2.188rem', '3rem']}
-          fontFamily="Maven Pro"
-          fontWeight="200"
-          textAlign="center"
-          lineHeight={['3rem', '3rem', '5rem']}
-          transform="translateY(40px)"
-          justifyContent="center"
-          mt={['10rem', '16rem', '10rem', '12rem', '12rem']}
-        >
-          {t.title1}{' '}
-          <Text
-            fontSize={['3.438rem', '3.438rem', '5.625rem']}
-            fontFamily="Baloo 2"
-            fontWeight="700"
+        <Fade bottom>
+          <Heading
+            color="white"
+            fontSize={['2.188rem', '2.188rem', '3rem']}
+            fontFamily="Maven Pro"
+            fontWeight="200"
+            textAlign="center"
+            lineHeight={['3rem', '3rem', '5rem']}
+            transform="translateY(40px)"
+            justifyContent="center"
+            mt={['10rem', '16rem', '10rem', '12rem', '12rem']}
           >
-            {t.title2}
-          </Text>
-        </Heading>
+            {t.title1}{' '}
+            <Text
+              fontSize={['3.438rem', '3.438rem', '5.625rem']}
+              fontFamily="Baloo 2"
+              fontWeight="700"
+            >
+              {t.title2}
+            </Text>
+          </Heading>
+        </Fade>
       </Flex>
 
       <Flex
@@ -148,6 +178,7 @@ const HomeScreen: NextPage = () => {
               textColor="purple.500"
               href="/"
               zIndex="999"
+              onClick={scrollToNoMobile}
               _hover={{
                 bgGradient: 'linear(to-t, white, white)',
               }}
@@ -160,6 +191,7 @@ const HomeScreen: NextPage = () => {
               shadow="dark-lg"
               textColor="#FFF"
               href="/"
+              onClick={scrollToYesMobile}
               _hover={{
                 bgGradient: 'linear(to-t, #4B2076, #360666)',
               }}
@@ -176,10 +208,13 @@ const HomeScreen: NextPage = () => {
               shadow="dark-lg"
               textColor="#FFF"
               href="/"
+              onClick={scrollToYes}
               transition={'bgGradient ease 2000s'}
               _hover={{
                 bgGradient: 'linear(to-t, #4B2076, #360666)',
               }}
+              _active={{ border: 'none', borderColor: 'transparent' }}
+              _focus={{ border: 'none', borderColor: 'transparent' }}
               mb="1rem"
               zIndex="9999"
             />
@@ -191,6 +226,9 @@ const HomeScreen: NextPage = () => {
               textColor="purple.500"
               href="/"
               zIndex="9999"
+              onClick={scrollToNo}
+              _active={{ border: 'none', borderColor: 'transparent' }}
+              _focus={{ border: 'none', borderColor: 'transparent' }}
               _hover={{
                 bgGradient: 'linear(to-t, white, white)',
               }}
