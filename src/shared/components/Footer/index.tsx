@@ -10,7 +10,13 @@ import {
   useBreakpointValue,
   Divider,
   Image,
+  HStack,
   Spinner,
+  Box,
+  Menu,
+  MenuButton,
+  MenuList,
+  MenuItem,
 } from '@chakra-ui/react';
 import IconCall from './icons/IconCall';
 import IconMail from './icons/IconMail';
@@ -20,8 +26,15 @@ import IconInstagram from './icons/IconInstagram';
 import IconFacebook from './icons/IconFacebook';
 import IconLinkedin from './icons/IconLinkedin';
 import IconBitsWhite from '../IconBitsWhite';
+import { ChevronDownIcon } from '@chakra-ui/icons';
+import { useTranslate } from '../../../contexts/Translate';
 
 export default function Footer() {
+  const { english, setEnglish }: any = useTranslate();
+  function translateMode() {
+    setEnglish(!english);
+  }
+
   const isWideVersion = useBreakpointValue({
     base: false,
     lg: true,
@@ -40,6 +53,8 @@ export default function Footer() {
         justify="center"
         align="center"
         alignItems="center"
+        pt={['3rem', '3rem', 0]}
+        pb={['1rem', '1rem', 0]}
       >
         {isWideVersion ? (
           <>
@@ -61,7 +76,69 @@ export default function Footer() {
                 gap={20}
               >
                 <Flex justify="space-around" flexDir="column">
-                  <IconBitsWhite />
+                  <HStack mt="0.2rem" spacing={5}>
+                    <Box mb="0.5rem">
+                      <IconBitsWhite />
+                    </Box>
+                    <Divider
+                      border="1px"
+                      borderColor="white"
+                      pt="1.2rem"
+                      mt="0.2rem"
+                      height="5px"
+                      orientation="vertical"
+                    />
+                    <Menu>
+                      <>
+                        <MenuButton
+                          py={2}
+                          as="button"
+                          transition="all 0.4s"
+                          _hover={{ border: 'none' }}
+                          _active={{ border: 'none' }}
+                          _expanded={{ bg: 'transparent' }}
+                          _focus={{}}
+                          bgColor="transparent"
+                          border="none"
+                          sx={{
+                            color: 'white',
+                          }}
+                        >
+                          {english === false ? (
+                            <Text as="span" color="white">
+                              PT
+                            </Text>
+                          ) : (
+                            <Text as="span" color="white">
+                              EN
+                            </Text>
+                          )}{' '}
+                          <ChevronDownIcon color="white" />
+                        </MenuButton>
+                        <MenuList
+                          p={0}
+                          display={'flex'}
+                          minW="0"
+                          flexDir="column"
+                          w={'130px'}
+                          bgColor="#fff"
+                          mr="1.9rem"
+                        >
+                          <MenuItem
+                            onClick={translateMode}
+                            _hover={{
+                              color: 'white',
+                              bgColor: 'purple.500',
+                              borderRadius: '5px',
+                              transition: 'all linear 0.2s',
+                            }}
+                          >
+                            {english === false ? 'Inglês' : 'Português'}
+                          </MenuItem>
+                        </MenuList>
+                      </>
+                    </Menu>
+                  </HStack>
 
                   <Text color="white">Saiba onde nos encontrar</Text>
                   <Flex>
@@ -90,7 +167,7 @@ export default function Footer() {
                   justify={['center', 'center', 'space-around']}
                   flexDir="column"
                 >
-                  <List color="white">
+                  <List spacing={2} color="white">
                     <ListItem fontFamily="Roboto" fontWeight="700" mb="1rem">
                       Serviços
                     </ListItem>
@@ -100,16 +177,16 @@ export default function Footer() {
                       borderColor="white"
                       orientation="horizontal"
                     ></Divider>
-                    <ListItem mt="0.5rem">Marketing Digital</ListItem>
-                    <ListItem mt="0.5rem">Vendas</ListItem>
-                    <ListItem mt="0.5rem">Legal Design</ListItem>
-                    <ListItem mt="0.5rem">Transformação digital</ListItem>
-                    <ListItem mt="0.5rem">Treinamentos</ListItem>
-                    <ListItem mt="0.5rem">Cursos</ListItem>
+                    <ListItem>Marketing Digital</ListItem>
+                    <ListItem>Vendas</ListItem>
+                    <ListItem>Legal Design</ListItem>
+                    <ListItem>Transformação digital</ListItem>
+                    <ListItem>Treinamentos</ListItem>
+                    <ListItem>Cursos</ListItem>
                   </List>
                 </Flex>
                 <GridItem mt="0.5rem">
-                  <List color="white">
+                  <List spacing={2} color="white">
                     <ListItem mb="0.9rem" fontFamily="Roboto" fontWeight="700">
                       Outros
                     </ListItem>
@@ -119,17 +196,15 @@ export default function Footer() {
                       borderColor="white"
                       orientation="horizontal"
                     ></Divider>
-                    <ListItem mt="0.5rem" mb="1rem">
-                      Blog
-                    </ListItem>
-                    <ListItem mb="1rem">Materiais Gratuitos</ListItem>
-                    <ListItem mb="1rem">Notícias</ListItem>
-                    <ListItem mb="1rem">Casos de sucesso</ListItem>
-                    <ListItem mb="1rem">Política de privacidade</ListItem>
+                    <ListItem mt="0.5rem">Blog</ListItem>
+                    <ListItem>Materiais Gratuitos</ListItem>
+                    <ListItem>Notícias</ListItem>
+                    <ListItem>Casos de sucesso</ListItem>
+                    <ListItem>Política de privacidade</ListItem>
                   </List>
                 </GridItem>
                 <GridItem>
-                  <Flex as="form" method="post" flexDir="column">
+                  <Flex mt="2rem" as="form" method="post" flexDir="column">
                     <Text
                       as="h4"
                       fontSize="16px"
@@ -194,14 +269,69 @@ export default function Footer() {
             mx="auto"
             flexDir={['column']}
           >
-            <Image
-              src="/images/bits-logo-white.svg"
-              w="60px"
-              h="28px"
-              mt="3rem"
-              mb="2rem"
-              alt="logo bits academy"
-            />
+            <HStack mb="1.5rem" mt="0.2rem" spacing={5}>
+              <Box mb="0.5rem">
+                <IconBitsWhite />
+              </Box>
+              <Divider
+                border="1px"
+                borderColor="white"
+                pt="1.2rem"
+                mt="0.2rem"
+                height="5px"
+                orientation="vertical"
+              />
+              <Menu>
+                <>
+                  <MenuButton
+                    py={2}
+                    as="button"
+                    transition="all 0.4s"
+                    _hover={{ border: 'none' }}
+                    _active={{ border: 'none' }}
+                    _expanded={{ bg: 'transparent' }}
+                    _focus={{}}
+                    bgColor="transparent"
+                    border="none"
+                    sx={{
+                      color: 'white',
+                    }}
+                  >
+                    {english === false ? (
+                      <Text as="span" color="white">
+                        PT
+                      </Text>
+                    ) : (
+                      <Text as="span" color="white">
+                        EN
+                      </Text>
+                    )}{' '}
+                    <ChevronDownIcon color="white" />
+                  </MenuButton>
+                  <MenuList
+                    p={0}
+                    display={'flex'}
+                    minW="0"
+                    flexDir="column"
+                    w={'130px'}
+                    bgColor="#fff"
+                    mr="1.9rem"
+                  >
+                    <MenuItem
+                      onClick={translateMode}
+                      _hover={{
+                        color: 'white',
+                        bgColor: 'purple.500',
+                        borderRadius: '5px',
+                        transition: 'all linear 0.2s',
+                      }}
+                    >
+                      {english === false ? 'Inglês' : 'Português'}
+                    </MenuItem>
+                  </MenuList>
+                </>
+              </Menu>
+            </HStack>
 
             <Divider orientation="vertical" />
 
@@ -241,9 +371,11 @@ export default function Footer() {
                   color="white"
                   size="10px"
                   mb="0.5rem"
+                  border="1px"
+                  borderColor="white"
                   orientation="horizontal"
                 />
-                <List color="white">
+                <List spacing={2} color="white">
                   <ListItem>Marketing Digital</ListItem>
                   <ListItem>Vendas</ListItem>
                   <ListItem>Legal Design</ListItem>
@@ -264,9 +396,11 @@ export default function Footer() {
                   color="white"
                   size="10px"
                   mb="0.5rem"
+                  border="1px"
+                  borderColor="white"
                   orientation="horizontal"
                 />
-                <List color="white">
+                <List spacing={2} color="white">
                   <ListItem>Blog</ListItem>
                   <ListItem>Política de privacidade</ListItem>
                 </List>
