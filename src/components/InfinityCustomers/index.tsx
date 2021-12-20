@@ -170,6 +170,19 @@ export default function InfinityCustomers() {
             h="130px"
             mx="1rem"
             alignSelf={'center'}
+            bgImage="url('/images/santander.svg')"
+            bgRepeat="no-repeat"
+            bgSize="contain"
+            display="flex"
+            align="center"
+            justifyContent="center"
+            py="auto"
+          ></Box>
+          <Box
+            w="200px"
+            h="130px"
+            mx="1rem"
+            alignSelf={'center'}
             bgImage="url('/images/ifood.svg')"
             bgRepeat="no-repeat"
             bgSize="contain"
@@ -191,19 +204,7 @@ export default function InfinityCustomers() {
             justifyContent="center"
             py="auto"
           ></Box>
-          <Box
-            w="200px"
-            h="130px"
-            mx="1rem"
-            alignSelf={'center'}
-            bgImage="url('/images/santander.svg')"
-            bgRepeat="no-repeat"
-            bgSize="contain"
-            display="flex"
-            align="center"
-            justifyContent="center"
-            py="auto"
-          ></Box>
+
           <Box
             w="200px"
             h="130px"

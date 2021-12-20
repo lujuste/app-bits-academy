@@ -28,7 +28,7 @@ import { BsTriangleFill } from 'react-icons/bs';
 import { MdGraphicEq } from 'react-icons/md';
 import { useState, useRef, useEffect } from 'react';
 import iconPlay from '../../../public/images/icon-play.svg';
-const videoURL = 'http://localhost:3000/images/whydigital.mp4';
+const videoURL = '/images/whydigital.mp4';
 
 import graphicHome from '../../../public/images/graphic-desk.svg';
 import graphicHomeMobile from '../../../public/images/graphic-mobile.svg';
