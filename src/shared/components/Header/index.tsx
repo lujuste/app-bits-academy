@@ -245,7 +245,10 @@ export default function Header() {
                 bgColor="#fff"
                 mr="0.9rem"
               >
-                <NextLink href="https://bitsacademy.com.br/noticias/" passHref>
+                <NextLink
+                  href="https://blog.bitsacademy.com.br/noticias/"
+                  passHref
+                >
                   <MenuItem
                     _hover={{
                       color: 'purple.500',
@@ -258,7 +261,7 @@ export default function Header() {
                 </NextLink>
 
                 <NextLink
-                  href="https://bitsacademy.com.br/casos-de-sucesso /"
+                  href="https://blog.bitsacademy.com.br/casos-de-sucesso/"
                   passHref
                 >
                   <MenuItem
