@@ -259,12 +259,39 @@ export default function Footer() {
                       borderColor="white"
                       orientation="horizontal"
                     ></Divider>
-                    <ListItem>Marketing Digital</ListItem>
-                    <ListItem>Vendas</ListItem>
-                    <ListItem>Legal Design</ListItem>
-                    <ListItem>Transformação digital</ListItem>
-                    <ListItem>Treinamentos</ListItem>
-                    <ListItem>Cursos</ListItem>
+                    <NextLink
+                      href="https://blog.bitsacademy.com.br/marketing-digital"
+                      passHref
+                    >
+                      <ListItem cursor="pointer">Marketing Digital</ListItem>
+                    </NextLink>
+                    <NextLink
+                      href="https://blog.bitsacademy.com.br/vendas"
+                      passHref
+                    >
+                      <ListItem cursor="pointer">Vendas</ListItem>
+                    </NextLink>
+                    <NextLink
+                      href="https://blog.bitsacademy.com.br/legal-design"
+                      passHref
+                    >
+                      <ListItem cursor="pointer">Legal Design</ListItem>
+                    </NextLink>
+                    <NextLink
+                      href="https://blog.bitsacademy.com.br/treinamentos"
+                      passHref
+                    >
+                      <ListItem cursor="pointer">Treinamentos</ListItem>
+                    </NextLink>
+                    <NextLink
+                      href="https://blog.bitsacademy.com.br/cursos"
+                      passHref
+                    >
+                      <ListItem cursor="pointer">Cursos</ListItem>
+                    </NextLink>
+                    <NextLink href="https://blog.bitsacademy.com.br/" passHref>
+                      <ListItem>Blog</ListItem>
+                    </NextLink>
                   </List>
                 </Flex>
                 <GridItem mt="0.5rem">
@@ -278,11 +305,32 @@ export default function Footer() {
                       borderColor="white"
                       orientation="horizontal"
                     ></Divider>
-                    <ListItem mt="0.5rem">Blog</ListItem>
-                    <ListItem>Materiais Gratuitos</ListItem>
-                    <ListItem>Notícias</ListItem>
-                    <ListItem>Casos de sucesso</ListItem>
-                    <ListItem>Política de privacidade</ListItem>
+                    <NextLink
+                      href="https://blog.bitsacademy.com.br/material-rico"
+                      passHref
+                    >
+                      <ListItem>Materiais Gratuitos</ListItem>
+                    </NextLink>
+                    <NextLink
+                      href="https://blog.bitsacademy.com.br/noticias"
+                      passHref
+                    >
+                      <ListItem>Notícias</ListItem>
+                    </NextLink>
+
+                    <NextLink
+                      href="https://blog.bitsacademy.com.br/casos-de-sucesso/"
+                      passHref
+                    >
+                      <ListItem>Casos de sucesso</ListItem>
+                    </NextLink>
+
+                    <NextLink
+                      href="https://blog.bitsacademy.com.br/politica-de-privacidade/"
+                      passHref
+                    >
+                      <ListItem>Política de privacidade</ListItem>
+                    </NextLink>
                   </List>
                 </GridItem>
                 <GridItem>
@@ -503,11 +551,36 @@ export default function Footer() {
                   orientation="horizontal"
                 />
                 <List spacing={2} color="white">
-                  <ListItem>Marketing Digital</ListItem>
-                  <ListItem>Vendas</ListItem>
-                  <ListItem>Legal Design</ListItem>
-                  <ListItem>Transformação digital</ListItem>
-                  <ListItem>Treinamentos</ListItem>
+                  <NextLink
+                    href="https://blog.bitsacademy.com.br/marketing-digital"
+                    passHref
+                  >
+                    <ListItem cursor="pointer">Marketing Digital</ListItem>
+                  </NextLink>
+                  <NextLink
+                    href="https://blog.bitsacademy.com.br/vendas"
+                    passHref
+                  >
+                    <ListItem cursor="pointer">Vendas</ListItem>
+                  </NextLink>
+                  <NextLink
+                    href="https://blog.bitsacademy.com.br/legal-design"
+                    passHref
+                  >
+                    <ListItem cursor="pointer">Legal Design</ListItem>
+                  </NextLink>
+                  <NextLink
+                    href="https://blog.bitsacademy.com.br/treinamentos"
+                    passHref
+                  >
+                    <ListItem cursor="pointer">Treinamentos</ListItem>
+                  </NextLink>
+                  <NextLink
+                    href="https://blog.bitsacademy.com.br/cursos"
+                    passHref
+                  >
+                    <ListItem cursor="pointer">Cursos</ListItem>
+                  </NextLink>
                 </List>
               </Flex>
               <Flex flexDir="column">
@@ -528,8 +601,15 @@ export default function Footer() {
                   orientation="horizontal"
                 />
                 <List spacing={2} color="white">
-                  <ListItem>Blog</ListItem>
-                  <ListItem>Política de privacidade</ListItem>
+                  <NextLink href="https://blog.bitsacademy.com.br/" passHref>
+                    <ListItem>Blog</ListItem>
+                  </NextLink>
+                  <NextLink
+                    href="https://blog.bitsacademy.com.br/politica-de-privacidade/"
+                    passHref
+                  >
+                    <ListItem>Política de privacidade</ListItem>
+                  </NextLink>
                 </List>
               </Flex>
             </Flex>

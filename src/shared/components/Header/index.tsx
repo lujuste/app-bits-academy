@@ -17,6 +17,7 @@ import {
   DrawerHeader,
   DrawerOverlay,
   IconButton,
+  Collapse,
 } from '@chakra-ui/react';
 import IconBitsWhite from '../IconBitsWhite';
 import {
@@ -43,7 +44,9 @@ export default function Header() {
   const router = useRouter();
   const { pathname, asPath, query } = router;
   const { isOpen, onOpen, onClose } = useSidebarDrawer();
+  const [show, setShow] = useState<any>(false);
 
+  const handleToggle = () => setShow(!show);
   const { t }: any = useTranslate();
 
   function translateMode() {
@@ -240,33 +243,32 @@ export default function Header() {
                 bgColor="#fff"
                 mr="0.9rem"
               >
-                <MenuItem
-                  _hover={{
-                    color: 'purple.500',
-                    fontWeight: 'regular',
-                    transition: 'all ease 0.1s',
-                  }}
+                <NextLink href="https://bitsacademy.com.br/noticias/" passHref>
+                  <MenuItem
+                    _hover={{
+                      color: 'purple.500',
+                      fontWeight: 'regular',
+                      transition: 'all ease 0.1s',
+                    }}
+                  >
+                    {t.menuitem2}
+                  </MenuItem>
+                </NextLink>
+
+                <NextLink
+                  href="https://bitsacademy.com.br/casos-de-sucesso/"
+                  passHref
                 >
-                  {t.menuitem}
-                </MenuItem>
-                <MenuItem
-                  _hover={{
-                    color: 'purple.500',
-                    fontWeight: 'regular',
-                    transition: 'all ease 0.1s',
-                  }}
-                >
-                  {t.menuitem2}
-                </MenuItem>
-                <MenuItem
-                  _hover={{
-                    color: 'purple.500',
-                    fontWeight: 'regular',
-                    transition: 'all ease 0.1s',
-                  }}
-                >
-                  {t.menuitem3}
-                </MenuItem>
+                  <MenuItem
+                    _hover={{
+                      color: 'purple.500',
+                      fontWeight: 'regular',
+                      transition: 'all ease 0.1s',
+                    }}
+                  >
+                    {t.menuitem3}
+                  </MenuItem>
+                </NextLink>
               </MenuList>
             </Menu>
           </Flex>

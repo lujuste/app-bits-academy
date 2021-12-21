@@ -208,7 +208,7 @@ const HomeScreen: NextPage = () => {
               text={t.btnhome1}
               shadow="dark-lg"
               textColor="#FFF"
-              href="/"
+              href="#typeformSection"
               onClick={scrollToYes}
               transition={'bgGradient ease 2000s'}
               _hover={{
@@ -225,7 +225,7 @@ const HomeScreen: NextPage = () => {
               text={t.btnhome2}
               shadow="2xl"
               textColor="purple.500"
-              href="/"
+              href="#sectionDigital"
               zIndex="9999"
               onClick={scrollToNo}
               _active={{ border: 'none', borderColor: 'transparent' }}

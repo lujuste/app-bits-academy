@@ -11,21 +11,22 @@ export default function MobileNav() {
       page: 'Início',
       url: '/',
     },
-    {
+
+    /*
       page: 'Serviços',
-      url: '/servicos',
-    },
+      url: '/servicos',*/
+
     {
       page: 'Notícias',
-      url: '/notícias',
+      url: 'https://blog.bitsacademy.com.br/noticias',
     },
     {
       page: 'Casos de sucesso',
-      url: '/cases',
+      url: 'https://blog.bitsacademy.com.br/noticias',
     },
     {
       page: 'Blog',
-      url: '/blog',
+      url: 'https://blog.bitsacademy.com.br/casos-de-sucesso/',
     },
   ];
 
