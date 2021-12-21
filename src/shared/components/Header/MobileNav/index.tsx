@@ -22,11 +22,11 @@ export default function MobileNav() {
     },
     {
       page: 'Casos de sucesso',
-      url: 'https://blog.bitsacademy.com.br/noticias',
+      url: 'https://blog.bitsacademy.com.br/casos-de-sucesso',
     },
     {
       page: 'Blog',
-      url: 'https://blog.bitsacademy.com.br/casos-de-sucesso/',
+      url: 'https://blog.bitsacademy.com.br/',
     },
   ];
 
