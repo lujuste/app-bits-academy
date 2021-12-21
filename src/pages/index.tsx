@@ -17,6 +17,7 @@ const Home: NextPage = () => {
           name="description"
           content="Bits Academy ajuda sua empresa a entrar no digital para aproveitar as vantagens que a internet traz para o seu negócio."
         />
+        <link rel="icon" sizes="256x256" href="/images/favicon7.ico/" />
         <meta charSet="utf-8" />
         <meta property="og:title" content="Bits Academy - Home" key="ogtitle" />
         +{' '}
@@ -25,7 +26,11 @@ const Home: NextPage = () => {
           content="Você quer se digitalizar?"
           key="ogdesc"
         />
-        <meta property="og:url" content={'http://localhost:3000'} key="ogurl" />
+        <meta
+          property="og:url"
+          content={'https://bitsacademy.com.br'}
+          key="ogurl"
+        />
         <meta
           property="og:site_name"
           content="Bits Academy - A transformação digital para sua empresa"
@@ -33,11 +38,11 @@ const Home: NextPage = () => {
         />
         <meta
           property="og:image"
-          content="https://legal-design-nextjs2.vercel.app/public/images/treinamento.png"
+          content="https://bitsacademy.com.br/images/bitslogo.png"
           key="ogimage"
         />
-        <meta property="og:image:width" content="300" />
-        <meta property="og:image:height" content="300" />
+        <meta property="og:image:width" content="160" />
+        <meta property="og:image:height" content="97" />
         <meta name="twitter:card" content="Legal Design" key="twcard" />
         <meta name="twitter:creator" content="Bits Academy" key="twhandle" />
       </Head>
