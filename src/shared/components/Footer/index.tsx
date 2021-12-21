@@ -309,27 +309,29 @@ export default function Footer() {
                       href="https://blog.bitsacademy.com.br/material-rico"
                       passHref
                     >
-                      <ListItem>Materiais Gratuitos</ListItem>
+                      <ListItem cursor="pointer">Materiais Gratuitos</ListItem>
                     </NextLink>
                     <NextLink
                       href="https://blog.bitsacademy.com.br/noticias"
                       passHref
                     >
-                      <ListItem>Notícias</ListItem>
+                      <ListItem cursor="pointer">Notícias</ListItem>
                     </NextLink>
 
                     <NextLink
                       href="https://blog.bitsacademy.com.br/casos-de-sucesso/"
                       passHref
                     >
-                      <ListItem>Casos de sucesso</ListItem>
+                      <ListItem cursor="pointer">Casos de sucesso</ListItem>
                     </NextLink>
 
                     <NextLink
                       href="https://blog.bitsacademy.com.br/politica-de-privacidade/"
                       passHref
                     >
-                      <ListItem>Política de privacidade</ListItem>
+                      <ListItem cursor="pointer">
+                        Política de privacidade
+                      </ListItem>
                     </NextLink>
                   </List>
                 </GridItem>
@@ -602,13 +604,15 @@ export default function Footer() {
                 />
                 <List spacing={2} color="white">
                   <NextLink href="https://blog.bitsacademy.com.br/" passHref>
-                    <ListItem>Blog</ListItem>
+                    <ListItem cursor="pointer">Blog</ListItem>
                   </NextLink>
                   <NextLink
                     href="https://blog.bitsacademy.com.br/politica-de-privacidade/"
                     passHref
                   >
-                    <ListItem>Política de privacidade</ListItem>
+                    <ListItem cursor="pointer">
+                      Política de privacidade
+                    </ListItem>
                   </NextLink>
                 </List>
               </Flex>

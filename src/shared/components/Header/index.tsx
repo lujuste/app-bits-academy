@@ -256,7 +256,7 @@ export default function Header() {
                 </NextLink>
 
                 <NextLink
-                  href="https://bitsacademy.com.br/casos-de-sucesso/"
+                  href="https://bitsacademy.com.br/casos-de-sucesso /"
                   passHref
                 >
                   <MenuItem
