@@ -133,46 +133,6 @@ export default function InfinityCustomers() {
             w="150px"
             h="110px"
             mx="auto"
-            bgImage="url('/images/equatorialCustomer.svg')"
-            bgRepeat="no-repeat"
-            bgSize="contain"
-            display="flex"
-            alignSelf={'center'}
-            justifyContent="center"
-            py="auto"
-            overflow="hidden"
-          ></Box>
-          <Box
-            w="150px"
-            h="110px"
-            mx="auto"
-            alignSelf={'center'}
-            mt="-2rem"
-            bgImage="url('/images/ifoodCustomer.svg')"
-            bgRepeat="no-repeat"
-            bgSize="contain"
-            display="flex"
-            align="center"
-            justifyContent="center"
-            py="auto"
-          ></Box>
-          <Box
-            w="150px"
-            h="110px"
-            mx="auto"
-            bgImage="url('/images/bndesCustomer.png')"
-            bgRepeat="no-repeat"
-            bgSize="contain"
-            display="flex"
-            alignSelf={'center'}
-            justifyContent="center"
-            py="auto"
-            overflow="hidden"
-          ></Box>
-          <Box
-            w="150px"
-            h="110px"
-            mx="auto"
             mt="-2rem"
             alignSelf={'center'}
             bgImage="url('/images/arcelormittalCustomer.svg')"
@@ -213,6 +173,32 @@ export default function InfinityCustomers() {
             w="150px"
             h="110px"
             mx="auto"
+            bgImage="url('/images/globo.svg')"
+            bgRepeat="no-repeat"
+            bgSize="contain"
+            display="flex"
+            alignSelf={'center'}
+            justifyContent="center"
+            py="auto"
+            overflow="hidden"
+          ></Box>
+          <Box
+            w="150px"
+            h="110px"
+            mx="auto"
+            alignSelf={'center'}
+            bgImage="url('/images/backgroundBrasil.svg')"
+            bgRepeat="no-repeat"
+            bgSize="contain"
+            display="flex"
+            align="center"
+            justifyContent="center"
+            py="auto"
+          ></Box>
+          <Box
+            w="150px"
+            h="110px"
+            mx="auto"
             bgImage="url('/images/equatorialCustomer.svg')"
             bgRepeat="no-repeat"
             bgSize="contain"
@@ -227,13 +213,27 @@ export default function InfinityCustomers() {
             h="110px"
             mx="auto"
             alignSelf={'center'}
-            bgImage="url('/images/krafts.svg')"
+            mt="-2rem"
+            bgImage="url('/images/ifoodCustomer.svg')"
             bgRepeat="no-repeat"
             bgSize="contain"
             display="flex"
             align="center"
             justifyContent="center"
             py="auto"
+          ></Box>
+          <Box
+            w="150px"
+            h="110px"
+            mx="auto"
+            bgImage="url('/images/bndesCustomer.png')"
+            bgRepeat="no-repeat"
+            bgSize="contain"
+            display="flex"
+            alignSelf={'center'}
+            justifyContent="center"
+            py="auto"
+            overflow="hidden"
           ></Box>
         </Marquee>
       )}

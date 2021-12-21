@@ -13,8 +13,8 @@ html {
 :root {
   --marquee-width: 100vw;
   --marquee-height: 20vh;
-  --marquee-elements: 8;
-  --marquee-elements-displayed: 6;
+  --marquee-elements: 9;
+  --marquee-elements-displayed: 4;
   --marquee-element-width: calc(
     var(--marquee-width) / var(--marquee-elements-displayed)
   );

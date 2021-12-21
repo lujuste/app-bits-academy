@@ -508,7 +508,7 @@ export default function UnderstandToDigital() {
                     color="white"
                     px="1rem"
                     bgGradient="linear(to-b, #793399, #4B2076)"
-                    maxW={['290px', '220px', '560px']}
+                    maxW={['290px', '300px', '420px', '560px']}
                     h="100px"
                     mt="2rem"
                     lineHeight={'27px'}
@@ -520,6 +520,7 @@ export default function UnderstandToDigital() {
                     w="100%"
                     fontSize={['1.1rem']}
                     mx="auto"
+                    _focus={{ bgGradient: 'linear(to-t, #4B2076, #360666)' }}
                     _hover={{
                       bgGradient: 'linear(to-t, #4B2076, #360666)',
                     }}
