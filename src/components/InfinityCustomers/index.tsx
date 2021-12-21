@@ -24,7 +24,7 @@ const data = {
   company: [
     {
       name: 'equatorial',
-      logo: 'equatorial',
+      logo: 'equatorialCustomer',
     },
     {
       name: 'globo',
@@ -36,7 +36,7 @@ const data = {
     },
     {
       name: 'arcelor',
-      logo: 'arcelor-mittal',
+      logo: 'arcelormittalCustomer',
     },
     {
       name: 'bndes',
@@ -44,7 +44,7 @@ const data = {
     },
     {
       name: 'kraft',
-      logo: 'kraft',
+      logo: 'krafts',
     },
     {
       name: 'santand',
@@ -130,8 +130,8 @@ export default function InfinityCustomers() {
           pauseOnHover={true}
         >
           <Box
-            w="130px"
-            h="100px"
+            w="150px"
+            h="110px"
             mx="auto"
             bgImage="url('/images/equatorialCustomer.svg')"
             bgRepeat="no-repeat"
@@ -143,10 +143,11 @@ export default function InfinityCustomers() {
             overflow="hidden"
           ></Box>
           <Box
-            w="130px"
-            h="100px"
+            w="150px"
+            h="110px"
             mx="auto"
             alignSelf={'center'}
+            mt="-2rem"
             bgImage="url('/images/ifoodCustomer.svg')"
             bgRepeat="no-repeat"
             bgSize="contain"
@@ -156,10 +157,10 @@ export default function InfinityCustomers() {
             py="auto"
           ></Box>
           <Box
-            w="130px"
-            h="100px"
+            w="150px"
+            h="110px"
             mx="auto"
-            bgImage="url('/images/equatorialCustomer.svg')"
+            bgImage="url('/images/bndesCustomer.png')"
             bgRepeat="no-repeat"
             bgSize="contain"
             display="flex"
@@ -169,11 +170,12 @@ export default function InfinityCustomers() {
             overflow="hidden"
           ></Box>
           <Box
-            w="130px"
-            h="100px"
+            w="150px"
+            h="110px"
             mx="auto"
+            mt="-2rem"
             alignSelf={'center'}
-            bgImage="url('/images/ifoodCustomer.svg')"
+            bgImage="url('/images/arcelormittalCustomer.svg')"
             bgRepeat="no-repeat"
             bgSize="contain"
             display="flex"
@@ -182,10 +184,10 @@ export default function InfinityCustomers() {
             py="auto"
           ></Box>
           <Box
-            w="130px"
-            h="100px"
+            w="150px"
+            h="110px"
             mx="auto"
-            bgImage="url('/images/equatorialCustomer.svg')"
+            bgImage="url('/images/santanderCustomer.svg')"
             bgRepeat="no-repeat"
             bgSize="contain"
             display="flex"
@@ -195,11 +197,11 @@ export default function InfinityCustomers() {
             overflow="hidden"
           ></Box>
           <Box
-            w="130px"
-            h="100px"
+            w="150px"
+            h="110px"
             mx="auto"
             alignSelf={'center'}
-            bgImage="url('/images/ifoodCustomer.svg')"
+            bgImage="url('/images/krafts.svg')"
             bgRepeat="no-repeat"
             bgSize="contain"
             display="flex"
@@ -208,8 +210,8 @@ export default function InfinityCustomers() {
             py="auto"
           ></Box>
           <Box
-            w="130px"
-            h="100px"
+            w="150px"
+            h="110px"
             mx="auto"
             bgImage="url('/images/equatorialCustomer.svg')"
             bgRepeat="no-repeat"
@@ -221,11 +223,11 @@ export default function InfinityCustomers() {
             overflow="hidden"
           ></Box>
           <Box
-            w="130px"
-            h="100px"
+            w="150px"
+            h="110px"
             mx="auto"
             alignSelf={'center'}
-            bgImage="url('/images/ifoodCustomer.svg')"
+            bgImage="url('/images/krafts.svg')"
             bgRepeat="no-repeat"
             bgSize="contain"
             display="flex"
