@@ -222,9 +222,11 @@ export default function Header() {
             <Center w={1} height="25px">
               <Divider orientation="vertical" />
             </Center>
-            <Text cursor="pointer" color="white">
-              Blog
-            </Text>
+            <NextLink href="https://blog.bitsacademy.com.br">
+              <Text cursor="pointer" color="white">
+                Blog
+              </Text>
+            </NextLink>
             <Center w={1} height="25px">
               <Divider orientation="vertical" />
             </Center>

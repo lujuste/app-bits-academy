@@ -290,7 +290,7 @@ export default function Footer() {
                       <ListItem cursor="pointer">Cursos</ListItem>
                     </NextLink>
                     <NextLink href="https://blog.bitsacademy.com.br/" passHref>
-                      <ListItem>Blog</ListItem>
+                      <ListItem cursor="pointer">Blog</ListItem>
                     </NextLink>
                   </List>
                 </Flex>
