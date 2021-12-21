@@ -219,9 +219,7 @@ export default function Header() {
                </MenuList>
              </Menu> */}
 
-            <Center w={1} height="25px">
-              <Divider orientation="vertical" />
-            </Center>
+            <Center w={1} height="25px"></Center>
             <NextLink href="https://blog.bitsacademy.com.br">
               <Text cursor="pointer" color="white">
                 Blog
