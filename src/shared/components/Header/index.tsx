@@ -18,6 +18,12 @@ import {
   DrawerOverlay,
   IconButton,
   Collapse,
+  Accordion,
+  AccordionItem,
+  AccordionButton,
+  AccordionIcon,
+  AccordionPanel,
+  Box,
 } from '@chakra-ui/react';
 import IconBitsWhite from '../IconBitsWhite';
 import {
@@ -44,7 +50,7 @@ export default function Header() {
   const router = useRouter();
   const { pathname, asPath, query } = router;
   const { isOpen, onOpen, onClose } = useSidebarDrawer();
-  const [show, setShow] = useState<any>(false);
+  const [show, setShow] = useState<boolean>(false);
 
   const handleToggle = () => setShow(!show);
   const { t }: any = useTranslate();
@@ -259,6 +265,30 @@ export default function Header() {
                 </NextLink>
 
                 <NextLink
+                  href="https://blog.bitsacademy.com.br/material-rico/"
+                  passHref
+                >
+                  <MenuItem
+                    _hover={{
+                      color: 'purple.500',
+                      fontWeight: 'regular',
+                      transition: 'all ease 0.1s',
+                    }}
+                  >
+                    Materiais gratuitos
+                  </MenuItem>
+                </NextLink>
+
+                <MenuItem
+                  _hover={{
+                    color: 'purple.500',
+                    fontWeight: 'regular',
+                    transition: 'all ease 0.1s',
+                  }}
+                  mt="-0.8rem"
+                ></MenuItem>
+
+                <NextLink
                   href="https://blog.bitsacademy.com.br/casos-de-sucesso/"
                   passHref
                 >
@@ -272,6 +302,125 @@ export default function Header() {
                     {t.menuitem3}
                   </MenuItem>
                 </NextLink>
+                <Accordion
+                  _active={{ border: 'none', borderColor: 'transparent' }}
+                  _focus={{ border: 'none', borderColor: 'transparent' }}
+                  allowToggle
+                  _hover={{ bgColor: 'transparent' }}
+                >
+                  <AccordionItem
+                    _active={{ border: 'none', borderColor: 'transparent' }}
+                    _focus={{ border: 'none', borderColor: 'transparent' }}
+                    _hover={{ bgColor: 'transparent' }}
+                  >
+                    <h2>
+                      <AccordionButton
+                        _active={{ border: 'none', borderColor: 'transparent' }}
+                        _focus={{ border: 'none', borderColor: 'transparent' }}
+                        _hover={{ bgColor: 'transparent' }}
+                      >
+                        <Box flex="1" textAlign="left">
+                          <Text
+                            _hover={{
+                              color: 'purple.500',
+                              fontWeight: 'regular',
+                              transition: 'all ease 0.1s',
+                              bgColor: 'transparent',
+                            }}
+                          >
+                            Serviços
+                          </Text>
+                        </Box>
+                        <AccordionIcon />
+                      </AccordionButton>
+                    </h2>
+                    <NextLink href="https://blog.bitsacademy.com.br/marketing-digital">
+                      <AccordionPanel
+                        _hover={{
+                          color: 'purple.500',
+                          fontWeight: 'regular',
+                          transition: 'all ease 0.1s',
+                          bgColor: 'transparent',
+                        }}
+                        cursor="pointer"
+                      >
+                        Marketing Digital
+                      </AccordionPanel>
+                    </NextLink>
+
+                    <NextLink
+                      href="https://blog.bitsacademy.com.br/vendas"
+                      passHref
+                    >
+                      <AccordionPanel
+                        _hover={{
+                          color: 'purple.500',
+                          fontWeight: 'regular',
+                          transition: 'all ease 0.1s',
+                          bgColor: 'transparent',
+                        }}
+                        mt="-0.2rem"
+                        cursor="pointer"
+                      >
+                        Vendas
+                      </AccordionPanel>
+                    </NextLink>
+
+                    <NextLink
+                      href="https://blog.bitsacademy.com.br/legal-design"
+                      passHref
+                    >
+                      <AccordionPanel
+                        _hover={{
+                          color: 'purple.500',
+                          fontWeight: 'regular',
+                          transition: 'all ease 0.1s',
+                          bgColor: 'transparent',
+                        }}
+                        mt="-0.2rem"
+                        cursor="pointer"
+                      >
+                        Legal Design
+                      </AccordionPanel>
+                    </NextLink>
+
+                    <NextLink
+                      href="https://blog.bitsacademy.com.br/treinamentos"
+                      passHref
+                    >
+                      <AccordionPanel
+                        _hover={{
+                          color: 'purple.500',
+                          fontWeight: 'regular',
+                          transition: 'all ease 0.1s',
+                          bgColor: 'transparent',
+                        }}
+                        mt="-0.2rem"
+                        cursor="pointer"
+                      >
+                        Treinamentos
+                      </AccordionPanel>
+                    </NextLink>
+
+                    <NextLink
+                      href="https://blog.bitsacademy.com.br/cursos"
+                      passHref
+                    >
+                      <AccordionPanel
+                        _hover={{
+                          color: 'purple.500',
+                          fontWeight: 'regular',
+                          transition: 'all ease 0.1s',
+                          bgColor: 'transparent',
+                        }}
+                        mt="-0.2rem"
+                        cursor="pointer"
+                      >
+                        Cursos
+                      </AccordionPanel>
+                    </NextLink>
+                  </AccordionItem>
+                </Accordion>
               </MenuList>
             </Menu>
           </Flex>
