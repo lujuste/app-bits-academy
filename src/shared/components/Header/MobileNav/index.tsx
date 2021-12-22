@@ -21,6 +21,10 @@ export default function MobileNav() {
       url: 'https://blog.bitsacademy.com.br/noticias',
     },
     {
+      page: 'Materiais Gratuitos',
+      url: 'https://blog.bitsacademy.com.br/material-rico',
+    },
+    {
       page: 'Casos de sucesso',
       url: 'https://blog.bitsacademy.com.br/casos-de-sucesso',
     },

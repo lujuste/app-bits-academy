@@ -279,29 +279,6 @@ export default function Header() {
                   </MenuItem>
                 </NextLink>
 
-                <MenuItem
-                  _hover={{
-                    color: 'purple.500',
-                    fontWeight: 'regular',
-                    transition: 'all ease 0.1s',
-                  }}
-                  mt="-0.8rem"
-                ></MenuItem>
-
-                <NextLink
-                  href="https://blog.bitsacademy.com.br/casos-de-sucesso/"
-                  passHref
-                >
-                  <MenuItem
-                    _hover={{
-                      color: 'purple.500',
-                      fontWeight: 'regular',
-                      transition: 'all ease 0.1s',
-                    }}
-                  >
-                    {t.menuitem3}
-                  </MenuItem>
-                </NextLink>
                 <Accordion
                   _active={{ border: 'none', borderColor: 'transparent' }}
                   _focus={{ border: 'none', borderColor: 'transparent' }}
@@ -421,6 +398,30 @@ export default function Header() {
                     </NextLink>
                   </AccordionItem>
                 </Accordion>
+
+                <MenuItem
+                  _hover={{
+                    color: 'purple.500',
+                    fontWeight: 'regular',
+                    transition: 'all ease 0.1s',
+                  }}
+                  mt="-0.8rem"
+                ></MenuItem>
+
+                <NextLink
+                  href="https://blog.bitsacademy.com.br/casos-de-sucesso/"
+                  passHref
+                >
+                  <MenuItem
+                    _hover={{
+                      color: 'purple.500',
+                      fontWeight: 'regular',
+                      transition: 'all ease 0.1s',
+                    }}
+                  >
+                    {t.menuitem3}
+                  </MenuItem>
+                </NextLink>
               </MenuList>
             </Menu>
           </Flex>
