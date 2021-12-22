@@ -279,7 +279,7 @@ export default function Header() {
                   </MenuItem>
                 </NextLink>
 
-                <Accordion
+                {/*  <Accordion
                   _active={{ border: 'none', borderColor: 'transparent' }}
                   _focus={{ border: 'none', borderColor: 'transparent' }}
                   allowToggle
@@ -397,7 +397,7 @@ export default function Header() {
                       </AccordionPanel>
                     </NextLink>
                   </AccordionItem>
-                </Accordion>
+                </Accordion> */}
 
                 <MenuItem
                   _hover={{

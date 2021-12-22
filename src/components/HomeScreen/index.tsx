@@ -141,9 +141,15 @@ const HomeScreen: NextPage = () => {
             fontWeight="200"
             textAlign="center"
             lineHeight={['3rem', '3rem', '5rem']}
-            transform="translateY(40px)"
+            transform={[
+              'translateY(160px)',
+              'translateY(160px)',
+              'translateY(120px)',
+              'translateY(120px)',
+              'translateY(100px)',
+              'translateY(140px)',
+            ]}
             justifyContent="center"
-            mt={['10rem', '16rem', '10rem', '12rem', '12rem']}
           >
             {t.title1}{' '}
             <Text
@@ -158,14 +164,13 @@ const HomeScreen: NextPage = () => {
       </Flex>
 
       <Flex
-        transform={isWideVersion ? 'translateY(100px)' : 'translateY(110px)'}
         w="100%"
         h="auto"
         justify="space-between"
-        py="4rem"
         px={['1rem', '2rem', '0']}
         maxW={['400px', '400px', '400px', '500px', '1010px']}
         mx="auto"
+        transform="translateY(30px)"
         zIndex={'920'}
         className="btnHomeFlex"
       >
@@ -208,7 +213,7 @@ const HomeScreen: NextPage = () => {
               text={t.btnhome1}
               shadow="dark-lg"
               textColor="#FFF"
-              href="#typeformSection"
+              href="/"
               onClick={scrollToYes}
               transition={'bgGradient ease 2000s'}
               _hover={{
@@ -225,7 +230,7 @@ const HomeScreen: NextPage = () => {
               text={t.btnhome2}
               shadow="2xl"
               textColor="purple.500"
-              href="#sectionDigital"
+              href="/"
               zIndex="9999"
               onClick={scrollToNo}
               _active={{ border: 'none', borderColor: 'transparent' }}

@@ -30,7 +30,7 @@ export default function FreeTestYourCompanyDigital({
             fontSize="1.15rem"
             fontWeight="400"
             fontFamily="Roboto"
-            mt={['2rem', '3rem', '3rem', '-6rem', '0rem']}
+            mt={['-14rem', '-14rem', '-12rem', '-10rem', '-1rem']}
           >
             {t.header1}
           </Text>

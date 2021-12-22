@@ -66,7 +66,7 @@ export default function InfinityCustomers() {
   return (
     <Flex
       h="100%"
-      mt={['-11rem', '-11rem', '-11rem', '-5rem', '-9.5rem']}
+      mt={['-10.5rem', '-10.5rem', '-11rem', '-5rem', '-9.5rem']}
       fontWeight="600"
       mx="auto"
       w="100%"

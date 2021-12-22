@@ -71,7 +71,7 @@ export default function MobileNav() {
           </NextLink>
         ))}
 
-        <Accordion
+        {/*  <Accordion
           _active={{ border: 'none', borderColor: 'transparent' }}
           _focus={{ border: 'none', borderColor: 'transparent' }}
           border="none"
@@ -137,7 +137,7 @@ export default function MobileNav() {
               </AccordionPanel>
             </NextLink>
           </AccordionItem>
-        </Accordion>
+        </Accordion> */}
       </VStack>
     </>
   );
