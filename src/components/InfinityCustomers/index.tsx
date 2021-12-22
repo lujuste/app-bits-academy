@@ -75,10 +75,11 @@ export default function InfinityCustomers() {
     >
       <Fade bottom>
         <Text
+          mb="1rem"
           maxW={['200px', '290px', '500px', '800px', '1200px']}
           mx="auto"
           fontSize={['1.575rem', '1.575rem', '1.875rem', '2rem', '3rem']}
-          mt={['3rem', '3rem', '10rem', '5rem', '10rem']}
+          mt={['3rem', '6rem', '10rem', '10rem', '10rem']}
           fontFamily="Maven Pro"
           textAlign={['center', 'center', 'center', 'center']}
         >
@@ -118,17 +119,7 @@ export default function InfinityCustomers() {
           </Box>
         </Flex>*/
 
-        <Marquee
-          style={{
-            display: 'flex',
-            marginTop: '1.5rem',
-            height: '100%',
-            overflow: 'hidden',
-            justifyContent: 'space-around',
-            alignItems: 'center',
-          }}
-          pauseOnHover={true}
-        >
+        <Marquee pauseOnHover={true} speed={120}>
           <Box
             w="150px"
             h="110px"
