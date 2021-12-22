@@ -13,8 +13,12 @@ import timelineIcon from '../../../public/images/iconn.svg';
 import timelineIconMobile from '../../../public/images/icon-mobile.svg';
 import { useTranslate } from '../../contexts/Translate';
 
+import Image from 'next/image';
+import timelineSafari from '../../../public/images/timelineSafari.webp';
+
 // @ts-ignore: Unreachable code error
 import Fade from 'react-reveal/Fade';
+import { isSafari } from 'react-device-detect';
 
 export default function History() {
   const { t }: any = useTranslate();
@@ -40,7 +44,8 @@ export default function History() {
       <Grid
         mt="5rem"
         mx="auto"
-        gap={20}
+        justifyContent={'center'}
+        gap={[20]}
         alignContent="center"
         templateColumns={[
           'repeat(1, 1fr)',
@@ -90,12 +95,26 @@ export default function History() {
           {!isMobile ? (
             <Flex mx="auto" justify="center" w="100%" h="auto">
               <Fade bottom>
-                <Box
-                  mt={['-3rem', '-2rem', '0']}
-                  maxW={['400px']}
-                  h="500px"
-                  as={isMobile ? timelineIconMobile : timelineIcon}
-                ></Box>
+                {!isSafari ? (
+                  <Box
+                    textAlign="center"
+                    display="flex"
+                    align="center"
+                    mx="auto"
+                    mt={['-3rem', '-2rem', '0']}
+                    maxW={['400px']}
+                    h="500px"
+                    as={isMobile ? timelineIconMobile : timelineIcon}
+                  ></Box>
+                ) : (
+                  <Image
+                    src={timelineSafari}
+                    width={390}
+                    height={479}
+                    priority
+                    quality={100}
+                  />
+                )}
               </Fade>
             </Flex>
           ) : (

@@ -6,6 +6,7 @@ import '@fontsource/baloo-bhaina-2';
 import RaysIcon from '../RaysIcon/index';
 import HomeButton from '../HomeButton';
 import IFreeTestYourCompanyDigitalProps from '../FreeTestYourCompanyDigital';
+import { isSafari } from 'react-device-detect';
 
 import { useRouter } from 'next/router';
 
@@ -90,14 +91,18 @@ const HomeScreen: NextPage = () => {
             mt="10rem"
           >
             <RaysIcon />
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
+            {!isSafari && (
+              <>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </>
+            )}
           </Flex>
         </>
       )}
