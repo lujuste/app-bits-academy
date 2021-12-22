@@ -399,6 +399,20 @@ section.section-stars.css-3xm7dh {
 
 @media (max-width: 420px) {
   div.css-emczun {
+    margin-top: 0rem;
+  }
+}
+
+@media (max-width: 320px) {
+  div.css-emczun {
+    margin-top: 4rem;
+  }
+
+  h2.chakra-heading.css-k1s9px {
     margin-top: -2rem;
+  }
+
+  div.btnHomeFlex {
+    margin-top: 6rem;
   }
 }
