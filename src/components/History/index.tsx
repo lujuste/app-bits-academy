@@ -120,12 +120,13 @@ export default function History() {
           ) : (
             <Fade bottom>
               <Flex
-                mt={['-3rem', '-2rem', '0']}
+                mt={['-3.5rem', '-2rem', '0']}
                 maxW={['400px']}
                 h="500px"
                 bgImage="url('/images/timelineMobile.webp')"
                 bgSize="contain"
                 bgRepeat="no-repeat"
+                mb={['1.5rem', '1.5rem', '0']}
               ></Flex>
             </Fade>
           )}

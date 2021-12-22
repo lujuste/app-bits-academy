@@ -420,3 +420,15 @@ section.section-stars.css-3xm7dh {
 div.css-1r281kh {
   margin: 0 auto;
 }
+
+@media (max-width: 370px) {
+  p.chakra-text.css-1dbp948 {
+    margin-top: -14rem;
+  }
+}
+
+@media (max-width: 320px) {
+  p.chakra-text.css-1dbp948 {
+    margin-top: -10rem;
+  }
+}

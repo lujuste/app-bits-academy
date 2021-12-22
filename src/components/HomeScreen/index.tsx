@@ -128,44 +128,37 @@ const HomeScreen: NextPage = () => {
         </Flex>
       )}
 
-      <Flex
-        flexDir="column"
-        mx="auto"
-        mt={isWideVersion ? `0` : '-3rem'}
-        justify="center"
-        align="center"
-        maxW="1400px"
-        h="100%"
-      >
+      <Flex flexDir="column" mx="auto" align="center" maxW="1400px" h="100%">
         <IFreeTestYourCompanyDigitalProps />
-        <Fade bottom>
-          <Heading
-            color="white"
-            fontSize={['2.188rem', '2.188rem', '3rem']}
-            fontFamily="Maven Pro"
-            fontWeight="200"
-            textAlign="center"
-            lineHeight={['3rem', '3rem', '5rem']}
-            transform={[
-              'translateY(160px)',
-              'translateY(160px)',
-              'translateY(120px)',
-              'translateY(120px)',
-              'translateY(75px)',
-              'translateY(100px)',
-            ]}
-            justifyContent="center"
-          >
-            {t.title1}{' '}
-            <Text
-              fontSize={['3.438rem', '3.438rem', '5.625rem']}
-              fontFamily="Baloo 2"
-              fontWeight="700"
+        <Flex
+          mx="auto"
+          justify="center"
+          align="center"
+          transform="translateY(80px)"
+          w="100%"
+          h="100%"
+        >
+          <Fade bottom>
+            <Heading
+              color="white"
+              fontSize={['2.188rem', '2.188rem', '3rem']}
+              fontFamily="Maven Pro"
+              fontWeight="200"
+              textAlign="center"
+              lineHeight={['3rem', '3rem', '5rem']}
+              justifyContent="center"
             >
-              {t.title2}
-            </Text>
-          </Heading>
-        </Fade>
+              {t.title1}{' '}
+              <Text
+                fontSize={['3.438rem', '3.438rem', '5.625rem']}
+                fontFamily="Baloo 2"
+                fontWeight="700"
+              >
+                {t.title2}
+              </Text>
+            </Heading>
+          </Fade>
+        </Flex>
       </Flex>
 
       <Flex
