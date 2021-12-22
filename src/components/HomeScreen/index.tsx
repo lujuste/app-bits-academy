@@ -146,8 +146,8 @@ const HomeScreen: NextPage = () => {
               'translateY(160px)',
               'translateY(120px)',
               'translateY(120px)',
+              'translateY(75px)',
               'translateY(100px)',
-              'translateY(140px)',
             ]}
             justifyContent="center"
           >
