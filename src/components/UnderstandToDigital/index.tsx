@@ -371,6 +371,7 @@ export default function UnderstandToDigital() {
                     fontSize={['1rem', '1rem', '1rem']}
                     fontFamily={'Maven Pro'}
                     textAlign="left"
+                    mt={['-0.5rem', '-0.5rem', '0']}
                   >
                     <ListIcon
                       transform="rotate(90deg)"
