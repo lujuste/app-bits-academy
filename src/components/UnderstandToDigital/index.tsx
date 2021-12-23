@@ -17,6 +17,8 @@ import {
   SliderThumb,
 } from '@chakra-ui/react';
 
+import Image from 'next/image';
+
 import NextLink from 'next/link';
 
 import { isSafari, isMobileSafari, isChrome } from 'react-device-detect';
@@ -30,7 +32,7 @@ import { useState, useRef, useEffect } from 'react';
 import iconPlay from '../../../public/images/icon-play.svg';
 const videoURL = '/images/whydigital.mp4';
 
-import graphicHome from '../../../public/images/graphic-desk.svg';
+import graphicHome from '../../../public/images/graphic.svg';
 import graphicHomeMobile from '../../../public/images/graphic-mobile.svg';
 import { useTranslate } from '../../contexts/Translate';
 
@@ -128,8 +130,8 @@ export default function UnderstandToDigital() {
       px={[0, 0, '3rem']}
       id="sectionDigital"
     >
-      <Flex flexDir="column" maxW="1400px" h="100%" justify="center" mx="auto">
-        <Flex justify="center" flexDir="column">
+      <Flex mx="auto" flexDir="column" maxW="1400px" h="100%" justify="center">
+        <Flex mx="auto" justify="center" flexDir="column">
           {isMobile ? (
             <Fade bottom>
               <Heading
@@ -145,9 +147,18 @@ export default function UnderstandToDigital() {
                 mb="1.5rem"
               >
                 {t.mobile_title_video_area}{' '}
-                <Text fontWeight="700" as="span" color="purple.500">
+                <Text
+                  mx="auto"
+                  textAlign={'center'}
+                  fontWeight="700"
+                  as="span"
+                  color="purple.500"
+                >
                   {' '}
-                  <Text as="span"> {t.mobile_title1_video} </Text>{' '}
+                  <Text mx="auto" textAlign={'center'} as="span">
+                    {' '}
+                    {t.mobile_title1_video}{' '}
+                  </Text>{' '}
                   {`${t.mobile_title2_video}`}
                 </Text>{' '}
               </Heading>
