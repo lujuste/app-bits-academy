@@ -54,14 +54,21 @@ export default function History() {
           'repeat(2, 1fr)',
         ]}
       >
-        <GridItem>
+        <GridItem ml={['0', '0', '0rem', '1.5rem', '1.5rem']}>
           <Fade bottom>
             <Heading
               px={['1rem', '1rem', '0']}
               maxW="574px"
-              fontSize={['1.563rem', '1.563rem', '2.813rem']}
+              fontSize={[
+                '1.563rem',
+                '1.563rem',
+                '1.563rem',
+                '2rem',
+                '2.813rem',
+              ]}
               fontFamily="Maven Pro"
               h="auto"
+              ml={['0', '0', '1.5rem', '1.5rem', '1.5rem', '0']}
               mt={['-4rem', '-3rem', '0', '0']}
               textAlign={['center', 'center', 'left']}
             >
@@ -86,6 +93,7 @@ export default function History() {
               mt={['2rem']}
               maxW="600px"
               px={['1rem', '1rem', '0']}
+              ml={['0', '0', '1.5rem', '1.5rem', '1.5rem', '0']}
             >
               {t.titlehistory5}
             </Text>
@@ -122,6 +130,7 @@ export default function History() {
               <Flex
                 mt={['-3.5rem', '-2rem', '0']}
                 maxW={['400px']}
+                mx="auto"
                 h="500px"
                 bgImage="url('/images/timelineMobile.webp')"
                 bgSize="contain"
