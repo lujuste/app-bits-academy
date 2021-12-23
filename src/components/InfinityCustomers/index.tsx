@@ -65,6 +65,7 @@ export default function InfinityCustomers() {
 
   return (
     <Flex
+      py={['1rem']}
       h="100%"
       mt={['-10.5rem', '-10.5rem', '-11rem', '-5rem', '-9.5rem']}
       fontWeight="600"
@@ -124,7 +125,6 @@ export default function InfinityCustomers() {
             w="150px"
             h="110px"
             mx="auto"
-            mt="-2rem"
             alignSelf={'center'}
             bgImage="url('/images/arcelormittalCustomer.svg')"
             bgRepeat="no-repeat"

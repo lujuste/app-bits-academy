@@ -43,6 +43,9 @@ export default function FreeTestYourCompanyDigital({
               h="62px"
               borderRadius="12px"
               bgGradient="linear(to-r, #DFDFDF, #FFF)"
+              _active={{ bgGradient: 'linear(to-r, #DFDFDF, #FFF)' }}
+              _focus={{ bgGradient: 'linear(to-r, #DFDFDF, #FFF)' }}
+              _hover={{ bgGradient: 'linear(to-r, #DFDFDF, #FFF)' }}
               fontFamily="Roboto"
               fontSize="1.1rem"
               color="purple.500"

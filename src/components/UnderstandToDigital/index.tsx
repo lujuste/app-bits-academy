@@ -549,6 +549,8 @@ export default function UnderstandToDigital() {
                     justifyContent="center"
                     alignItems="center"
                     w="100%"
+                    _focus={{ bgGradient: 'linear(to-b, #793399, #4B2076)' }}
+                    _active={{ bgGradient: 'linear(to-b, #793399, #4B2076)' }}
                     _hover={{
                       bgGradient: 'linear(to-t, #4B2076, #360666)',
                     }}
