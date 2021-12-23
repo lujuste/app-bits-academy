@@ -270,40 +270,8 @@ export default function UnderstandToDigital() {
                   >
                     <source src="/images/whydigital.mp4" type="video/mp4" />
                   </video>
-                  {playerState.playing
-                    ? ''
-                    : !isSafari && (
-                        <Icon
-                          position="absolute"
-                          top="38%"
-                          className="iconPlay"
-                          left="43%"
-                          right="0"
-                          w="100px"
-                          onClick={toggleVideoPlay}
-                          h="100px"
-                          textAlign="center"
-                          cursor="pointer"
-                          as={iconPlay}
-                        />
-                      )}
                 </Box>
-                <Flex mt="2rem" mx="auto" w="300px" h="20px">
-                  <Slider
-                    onChange={(e) => handleChangeVideoPercentage}
-                    value={playerState.percentage}
-                  >
-                    <SliderTrack bg="#e3d2f4">
-                      <Box position="relative" right={10} />
-                      <SliderFilledTrack bg="purple.500" />
-                    </SliderTrack>
-                    <SliderThumb
-                      color="purple.500"
-                      as={MdGraphicEq}
-                      boxSize={6}
-                    />
-                  </Slider>
-                </Flex>
+                <Flex mt="2rem" mx="auto" w="300px" h="20px"></Flex>
               </Flex>
             </GridItem>
           </Grid>
@@ -566,7 +534,7 @@ export default function UnderstandToDigital() {
                     _hover={{
                       bgGradient: 'linear(to-t, #4B2076, #360666)',
                     }}
-                    fontSize={['0.8rem', '0.5rem', '0.875rem']}
+                    fontSize={['0.8rem', '0.5rem', '1.25rem']}
                     mx="auto"
                   >
                     QUERO SABER MAIS SOBRE TRANSFORMAÇÃO DIGITAL
