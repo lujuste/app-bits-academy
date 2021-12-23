@@ -52,6 +52,13 @@ export default class MyDocument extends Document {
           <ColorModeScript initialColorMode="dark" />
           <Main />
           <NextScript />
+          <noscript>
+            <iframe
+              src="https://www.googletagmanager.com/ns.html?id=GTM-MC2FM55"
+              height="0"
+              width="0"
+            ></iframe>
+          </noscript>
         </body>
       </Html>
     );

@@ -264,6 +264,18 @@ export default function Header() {
                   </MenuItem>
                 </NextLink>
 
+                <NextLink href="https://blog.bitsacademy.com.br/" passHref>
+                  <MenuItem
+                    _hover={{
+                      color: 'purple.500',
+                      fontWeight: 'regular',
+                      transition: 'all ease 0.1s',
+                    }}
+                  >
+                    Blog
+                  </MenuItem>
+                </NextLink>
+
                 <NextLink
                   href="https://blog.bitsacademy.com.br/material-rico/"
                   passHref

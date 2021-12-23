@@ -1,4 +1,5 @@
 import { NextPage } from 'next';
+import dynamic from 'next/dynamic';
 import { Flex, Heading, Text, useBreakpointValue, Box } from '@chakra-ui/react';
 // @ts-ignore: Unreachable code error
 import Fade from 'react-reveal/Fade';
@@ -12,6 +13,13 @@ import { useRouter } from 'next/router';
 
 import { useTranslate } from '../../contexts/Translate';
 import RaysIconMobile from '../RaysIconMobile';
+
+const FreeTestYourCompanyWithoutSSR = dynamic(
+  () => import('../FreeTestYourCompanyDigital'),
+  {
+    ssr: false,
+  },
+);
 
 const HomeScreen: NextPage = () => {
   function scrollToYes() {
@@ -109,11 +117,11 @@ const HomeScreen: NextPage = () => {
 
       {isMobile && (
         <Flex
-          opacity="0.9"
           position="absolute"
           w="100%"
           h="100%"
           right="10%"
+          bgImage="/images/rays-icon.svg"
           overflow="hidden"
         >
           <RaysIconMobile />
@@ -129,7 +137,7 @@ const HomeScreen: NextPage = () => {
       )}
 
       <Flex flexDir="column" mx="auto" align="center" maxW="1400px" h="100%">
-        <IFreeTestYourCompanyDigitalProps />
+        <FreeTestYourCompanyWithoutSSR />
         <Flex
           mx="auto"
           justify="center"
