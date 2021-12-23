@@ -478,7 +478,7 @@ export default function UnderstandToDigital() {
         {isMobile ? (
           <Fade bottom>
             <NextLink
-              href="https://api.whatsapp.com/send?phone=5511910534971&text=Quero%20falar%20com%20um%20especialista%20sobre%20Legal%20Design"
+              href="https://blog.bitsacademy.com.br/transformacao-digital/transformacao-digital-da-sua-empresa-porque-digitalizar/"
               passHref
             >
               <a target="_blank">
@@ -514,7 +514,7 @@ export default function UnderstandToDigital() {
         ) : (
           <Fade bottom>
             <NextLink
-              href="https://api.whatsapp.com/send?phone=5511910534971&text=Quero%20falar%20com%20um%20especialista%20sobre%20Legal%20Design"
+              href="https://blog.bitsacademy.com.br/transformacao-digital/transformacao-digital-da-sua-empresa-porque-digitalizar/"
               passHref
             >
               <a target="_blank">
