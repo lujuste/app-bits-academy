@@ -195,7 +195,6 @@ const HomeScreen: NextPage = () => {
                 bgGradient: 'linear(to-t, white, white)',
               }}
               zIndex="999"
-              onClick={scrollToNoMobile}
               _hover={{
                 bgGradient: 'linear(to-t, white, white)',
               }}
@@ -208,7 +207,6 @@ const HomeScreen: NextPage = () => {
               shadow="dark-lg"
               textColor="#FFF"
               href="#typeformSection"
-              onClick={scrollToYesMobile}
               _focus={{ bgGradient: 'linear(to-t, #4B2076, #360666)' }}
               _active={{
                 bgGradient: 'linear(to-t, #4B2076, #360666)',
