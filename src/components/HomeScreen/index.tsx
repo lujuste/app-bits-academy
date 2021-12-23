@@ -179,8 +179,13 @@ const HomeScreen: NextPage = () => {
               colorTwo="#FFF"
               text={t.btnhome2}
               shadow="2xl"
+              variant={'solid'}
               textColor="purple.500"
               href="#sectionDigital"
+              _focus={{ bgGradient: 'linear(to-t, white, white)' }}
+              _active={{
+                bgGradient: 'linear(to-t, white, white)',
+              }}
               zIndex="999"
               onClick={scrollToNoMobile}
               _hover={{
@@ -196,6 +201,10 @@ const HomeScreen: NextPage = () => {
               textColor="#FFF"
               href="#typeformSection"
               onClick={scrollToYesMobile}
+              _focus={{ bgGradient: 'linear(to-t, #4B2076, #360666)' }}
+              _active={{
+                bgGradient: 'linear(to-t, #4B2076, #360666)',
+              }}
               _hover={{
                 bgGradient: 'linear(to-t, #4B2076, #360666)',
               }}
