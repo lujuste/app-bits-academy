@@ -271,7 +271,12 @@ export default function UnderstandToDigital() {
                     <source src="/images/whydigital.mp4" type="video/mp4" />
                   </video>
                 </Box>
-                <Flex mt="2rem" mx="auto" w="300px" h="20px"></Flex>
+                <Flex
+                  mt={['-1rem', '-1rem', '2rem']}
+                  mx="auto"
+                  w="300px"
+                  h="20px"
+                ></Flex>
               </Flex>
             </GridItem>
           </Grid>
